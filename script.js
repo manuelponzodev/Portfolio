@@ -4,6 +4,7 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const clamp = (v, min = 0, max = 1) => Math.min(max, Math.max(min, v));
 const body = document.body;
+const i18n = window.i18n || { lang: "es", pick: (es) => es, onChange: () => {} };
 
 // Año y hora local
 $("#year").textContent = new Date().getFullYear();
@@ -48,6 +49,7 @@ if (reduceMotion || seen) {
   start();
 } else {
   const word = $(".loader-word span");
+  word.textContent = greetings[0];
   greetings.forEach((g, i) => setTimeout(() => { word.textContent = g; }, 380 + i * 260));
   setTimeout(start, 380 + greetings.length * 260 + 250);
 }
@@ -109,7 +111,7 @@ if (journey) {
     live: svg('<circle class="ring" cx="24" cy="24" r="15"/><circle class="d" cx="24" cy="24" r="15"/><path class="d o" style="--d:.5s" d="M17 24.5l5 5 9.5-10.5"/>'),
     sixteen: svg(grid16),
     hub: svg('<path class="d" d="M24 24L24 7M24 24L39 15M24 24L39 33M24 24L24 41M24 24L9 33M24 24L9 15"/><circle class="p" cx="24" cy="7" r="3" style="--d:.5s"/><circle class="p" cx="39" cy="15" r="3" style="--d:.6s"/><circle class="p" cx="39" cy="33" r="3" style="--d:.7s"/><circle class="p" cx="24" cy="41" r="3" style="--d:.8s"/><circle class="p" cx="9" cy="33" r="3" style="--d:.9s"/><circle class="p" cx="9" cy="15" r="3" style="--d:1s"/><circle class="p of" cx="24" cy="24" r="6"/>'),
-    chat: svg('<path class="d" d="M7 11h34v21H21l-8 7v-7H7z"/><circle class="dot" cx="17" cy="21.5" r="2.2"/><circle class="dot" cx="24" cy="21.5" r="2.2" style="--d:.15s"/><circle class="dot o" cx="31" cy="21.5" r="2.2" style="--d:.3s;fill:var(--orange)"/>'),
+    chat: svg('<path class="d" d="M7 11h34v21H21l-8 7v-7H7z"/><circle class="dot" cx="17" cy="21.5" r="2.2"/><circle class="dot" cx="24" cy="21.5" r="2.2" style="--d:.15s"/><circle class="dot o" cx="31" cy="21.5" r="2.2" style="--d:.3s;fill:var(--accent)"/>'),
     phone: svg('<rect class="d" x="14" y="5" width="20" height="38" rx="4"/><path class="d" style="--d:.3s" d="M21 38h6"/><path class="d o" style="--d:.6s" d="M18 14h12v9h-6l-3 3v-3h-3z"/>'),
     talk: svg('<path class="d" d="M5 9h23v13H15l-5 4v-4H5z"/><path class="d o" style="--d:.5s" d="M43 21H20v13h14l5 4v-4h4z"/>'),
     calendar: svg('<rect class="d" x="6" y="10" width="36" height="31" rx="4"/><path class="d" style="--d:.3s" d="M6 18h36M15 6v8M33 6v8"/><rect class="p of" x="27" y="25" width="9" height="9" rx="2" style="--d:.8s"/>'),
@@ -120,12 +122,13 @@ if (journey) {
     fork: svg('<path class="d" d="M24 43V27"/><path class="d" style="--d:.4s" d="M24 27L11 14"/><path class="d o" style="--d:.4s" d="M24 27l13-13"/><path class="d o" style="--d:.9s" d="M30 14h7v7"/><circle class="p" cx="11" cy="14" r="2.6" style="--d:1s"/>'),
     sprout: svg('<path class="d" d="M9 42h30"/><path class="d" style="--d:.3s" d="M24 42V22"/><path class="d o" style="--d:.8s" d="M24 29c-8 0-12-5-12-12 8 0 12 5 12 12z"/><path class="d o" style="--d:1.1s" d="M24 24c0-7 5-12 12-12 0 7-5 12-12 12z"/>'),
   };
+  // Cada texto va en los tres idiomas: [ícono, es, en, fr]
   const cases = [
-    { name: "Envi", steps: [["inflation", "La inflación esconde el costo real"], ["bars", "Costeo FIFO y CPP"], ["live", "En producción"]] },
-    { name: "Settler", steps: [["sixteen", "Una demo, 16 pasos"], ["hub", "Agente con 13 tools"], ["chat", "Una sola conversación"]] },
-    { name: "Agente de turnos", steps: [["phone", "Reservar desde WhatsApp"], ["talk", "Un agente que conversa"], ["calendar", "Turno en el calendario"]] },
-    { name: "Industrially", steps: [["factory", "Cada planta es distinta"], ["blocks", "Módulo productivo a medida"], ["pin", "Puerta por puerta"]] },
-    { name: "FieldOps AI", steps: [["rain", "El clima manda"], ["fork", "Agentes para decidir"], ["sprout", "En desarrollo"]] },
+    { brand: "envi", name: ["Envi", "Envi", "Envi"], steps: [["inflation", "La inflación esconde el costo real", "Inflation hides the real cost", "L'inflation cache le coût réel"], ["bars", "Costeo FIFO y CPP", "FIFO and WAC costing", "Coûts FIFO et CMP"], ["live", "En producción", "In production", "En production"]] },
+    { brand: "envi", name: ["Settler", "Settler", "Settler"], steps: [["sixteen", "Una demo, 16 pasos", "One demo, 16 steps", "Une démo, 16 étapes"], ["hub", "Agente con 13 tools", "An agent with 13 tools", "Un agent avec 13 outils"], ["chat", "Una sola conversación", "A single conversation", "Une seule conversation"]] },
+    { brand: "thalk", name: ["Agente de turnos", "Booking agent", "Agent de réservation"], steps: [["phone", "Reservar desde WhatsApp", "Booking from WhatsApp", "Réserver sur WhatsApp"], ["talk", "Un agente que conversa", "An agent that talks", "Un agent qui converse"], ["calendar", "Turno en el calendario", "Booked in the calendar", "Réservé dans le calendrier"]] },
+    { brand: "industrially", name: ["Industrially", "Industrially", "Industrially"], steps: [["factory", "Cada planta es distinta", "Every plant is different", "Chaque usine est différente"], ["blocks", "Módulo productivo a medida", "Custom production module", "Module de production sur mesure"], ["pin", "Puerta por puerta", "Door to door", "Porte-à-porte"]] },
+    { brand: "fieldops", name: ["FieldOps AI", "FieldOps AI", "FieldOps AI"], steps: [["rain", "El clima manda", "Weather rules", "La météo commande"], ["fork", "Agentes para decidir", "Agents to decide", "Des agents pour décider"], ["sprout", "En desarrollo", "In development", "En développement"]] },
   ];
   const nodes = $$(".jr-node", journey);
   const texts = $$(".jr-t", journey);
@@ -136,15 +139,17 @@ if (journey) {
   let caseIndex = 0;
 
   const render = (c, i) => {
-    nameEl.textContent = c.name;
+    journey.dataset.brand = c.brand;
+    nameEl.textContent = i18n.pick(...c.name);
     countEl.textContent = `0${i + 1} / 0${cases.length}`;
-    texts.forEach((t, k) => { t.textContent = c.steps[k][1]; });
+    texts.forEach((t, k) => { t.textContent = i18n.pick(c.steps[k][1], c.steps[k][2], c.steps[k][3]); });
     icoEls.forEach((el, k) => {
       el.innerHTML = icons[c.steps[k][0]];
       $$(".d", el).forEach((p) => p.setAttribute("pathLength", "1"));
     });
   };
   render(cases[0], 0);
+  i18n.onChange(() => render(cases[caseIndex], caseIndex));
 
   const dots = $$(".jr-dots button", journey);
   let litTimers = [];
@@ -221,14 +226,14 @@ if (finePointer && !reduceMotion) {
       const py = (e.clientY - r.top) / r.height;
       el.style.setProperty("--mx", (px * 100).toFixed(1) + "%");
       el.style.setProperty("--my", (py * 100).toFixed(1) + "%");
-      if (tilt) el.style.transform = `perspective(1100px) rotateX(${((0.5 - py) * 5).toFixed(2)}deg) rotateY(${((px - 0.5) * 6).toFixed(2)}deg) translateY(-4px)`;
+      if (tilt && !el.querySelector(".build[open]")) el.style.transform = `perspective(1100px) rotateX(${((0.5 - py) * 5).toFixed(2)}deg) rotateY(${((px - 0.5) * 6).toFixed(2)}deg) translateY(-4px)`;
     });
     el.addEventListener("mouseleave", () => { if (tilt) el.style.transform = ""; });
   });
 }
 
 // Título de contacto: cada letra reacciona al pasar el mouse
-$$(".contact-title .ct-line > span").forEach((line) => {
+const wrapLetters = () => $$(".contact-title .ct-line > span").forEach((line) => {
   const wrap = (node) => {
     [...node.childNodes].forEach((child) => {
       if (child.nodeType === Node.TEXT_NODE) {
@@ -246,14 +251,17 @@ $$(".contact-title .ct-line > span").forEach((line) => {
   };
   wrap(line);
 });
+wrapLetters();
 
 // Texto que se enciende palabra por palabra
 const lit = $("[data-lit]");
 let litWords = [];
-if (lit) {
+const wrapLit = () => {
+  if (!lit) return;
   lit.innerHTML = lit.textContent.trim().split(/\s+/).map((w) => `<span class="w">${w}</span>`).join(" ");
   litWords = $$(".w", lit);
-}
+};
+wrapLit();
 
 // Banda de rubros que acompaña la velocidad del scroll
 const band = $(".band-track");
@@ -364,8 +372,16 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", onScroll);
 onScroll();
 
+// Al cambiar de idioma se reemplazan textos: volver a partir palabras y letras, y refrescar escenarios
+i18n.onChange(() => {
+  wrapLit();
+  wrapLetters();
+  chapters.forEach((ch) => { ch.current = -1; });
+  onScroll();
+});
+
 // Aparición de bloques
-const revealEls = $$(".work-head > *, .ch-head > :not(.ch-num), .own-card, .horus, .about-main > *, .tl-item, .intro-foot, .contact-row");
+const revealEls = $$(".work-head > *, .ch-head > :not(.ch-num), .own-card, .about-main > *, .tl-item, .intro-foot, .contact-row");
 revealEls.forEach((el) => el.classList.add("rv"));
 const revealIO = new IntersectionObserver((entries) => entries.forEach((en) => {
   if (!en.isIntersecting) return;
@@ -435,7 +451,11 @@ if (cursor && finePointer) {
   };
   requestAnimationFrame(loop);
   $$("[data-cursor]").forEach((el) => {
-    el.addEventListener("mouseenter", () => { label.textContent = el.dataset.cursor; cursor.classList.add("big"); });
+    el.addEventListener("mouseenter", () => {
+      label.textContent = el.dataset.cursor;
+      cursor.style.setProperty("--accent", getComputedStyle(el).getPropertyValue("--accent"));
+      cursor.classList.add("big");
+    });
     el.addEventListener("mouseleave", () => cursor.classList.remove("big"));
   });
 }
@@ -446,10 +466,10 @@ mailBtn?.addEventListener("click", async () => {
   const hint = $(".mail-hint", mailBtn);
   try {
     await navigator.clipboard.writeText(mailBtn.dataset.email);
-    hint.textContent = "¡Copiado! Te espero en el inbox";
+    hint.textContent = i18n.pick("¡Copiado! Te espero en el inbox", "Copied! See you in my inbox", "Copié ! À bientôt dans ma boîte mail");
   } catch (_) {
     window.location.href = "mailto:" + mailBtn.dataset.email;
     return;
   }
-  setTimeout(() => { hint.textContent = "Click para copiar"; }, 2400);
+  setTimeout(() => { hint.textContent = i18n.pick("Click para copiar", "Click to copy", "Cliquez pour copier"); }, 2400);
 });

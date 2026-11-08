@@ -4,33 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c0c0b">
-  <meta name="description" content="Manuel Ponzo — desarrollador full stack, IA aplicada y ventas B2B. Construyo software a partir de problemas reales y lo llevo a la calle.">
-  <title>Manuel Ponzo — Construyo software y lo llevo a la calle</title>
+  <meta name="description" content="Manuel Ponzo — AI Engineer y desarrollador full stack. Construyo agentes de IA y producto SaaS B2B que funcionan en producción, con evals y validación de acciones. Y entiendo el lado comercial: discovery, posicionamiento y venta." data-i18n-attr="content:meta.desc">
+  <title data-i18n="meta.title">Manuel Ponzo — Agentes de IA y producto B2B en producción</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="is-loading">
-  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <a class="skip-link" href="#contenido" data-i18n="skip">Ir al contenido</a>
 
-  <!-- Saludo inicial -->
+  <!-- Saludo inicial: la palabra la pone script.js, así no queda texto suelto en el HTML -->
   <div class="loader" aria-hidden="true">
-    <p class="loader-word"><i></i><span>Hola</span></p>
+    <p class="loader-word"><i></i><span></span></p>
     <svg class="loader-curve" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0 0h1000v0Q500 100 0 0z"/></svg>
   </div>
 
   <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
 
-  <nav class="proj-nav" aria-label="Saltar entre proyectos"><a href="#agentes">Agentes IA</a><a href="#envi">Envi</a><a href="#thalk">Thalk</a><a href="#industrially">Industrially</a><a href="#propios">Propios</a></nav>
+  <nav class="proj-nav" aria-label="Saltar entre proyectos" data-i18n-attr="aria-label:pn.aria"><a href="#agentes" data-i18n="pn.agents">Agentes IA</a><a href="#envi" data-brand="envi">Envi</a><a href="#thalk" data-brand="thalk">Thalk</a><a href="#industrially" data-brand="industrially">Industrially</a><a href="#propios" data-i18n="pn.own">Propios</a></nav>
 
   <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="Manuel Ponzo, inicio">M<span>.</span></a>
-    <nav aria-label="Navegación principal">
-      <a href="#agentes" class="nav-link"><span data-text="Agentes">Agentes</span></a>
-      <a href="#trabajo" class="nav-link"><span data-text="Proyectos">Proyectos</span></a>
-      <a href="#sobre-mi" class="nav-link"><span data-text="Sobre mí">Sobre mí</span></a>
-      <a href="#contacto" class="nav-link"><span data-text="Contacto">Contacto</span></a>
+    <a class="brand" href="#inicio" aria-label="Manuel Ponzo, inicio" data-i18n-attr="aria-label:brand.aria">M<span>.</span></a>
+    <nav aria-label="Navegación principal" data-i18n-attr="aria-label:nav.aria">
+      <a href="#agentes" class="nav-link"><span data-text="Agentes" data-i18n="nav.agents">Agentes</span></a>
+      <a href="#trabajo" class="nav-link nav-work"><span data-text="Proyectos" data-i18n="nav.work">Proyectos</span></a>
+      <a href="#sobre-mi" class="nav-link"><span data-text="Sobre mí" data-i18n="nav.about">Sobre mí</span></a>
+      <a href="#contacto" class="nav-link"><span data-text="Contacto" data-i18n="nav.contact">Contacto</span></a>
+      <div class="lang-toggle" role="group" data-lang-toggle aria-label="Idioma" data-i18n-attr="aria-label:lang.aria"><button type="button" data-lang="en" lang="en" aria-label="English">EN</button><i>/</i><button type="button" data-lang="es" lang="es" aria-label="Español">ES</button><i>/</i><button type="button" data-lang="fr" lang="fr" aria-label="Français">FR</button></div>
     </nav>
   </header>
 
@@ -41,62 +42,62 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="hero-role">Soy Manuel —
+          <p class="hero-role"><span data-i18n="hero.role">Soy Manuel —</span>
             <span class="rotator" aria-live="off">
-              <span class="rot-word on">desarrollador full stack</span>
-              <span class="rot-word">builder de agentes de IA</span>
-              <span class="rot-word">el que habla con el cliente</span>
-              <span class="rot-word">CCO de Industrially</span>
-              <span class="rot-word">ex saxofonista</span>
+              <span class="rot-word on" data-i18n="rot.1">builder de agentes de IA</span>
+              <span class="rot-word" data-i18n="rot.2">desarrollador full stack</span>
+              <span class="rot-word" data-i18n="rot.3">el que habla con el cliente</span>
+              <span class="rot-word" data-i18n="rot.4">CCO de Industrially</span>
+              <span class="rot-word" data-i18n="rot.5">ex saxofonista</span>
             </span>
           </p>
           <h1 class="hero-title" id="hero-title">
-            <span class="line"><span>Entiendo el negocio.</span></span>
-            <span class="line"><span>Construyo el producto.</span></span>
-            <span class="line"><span><em>Lo llevo al mercado.</em></span></span>
+            <span class="line"><span data-i18n="hero.l1">Entiendo el negocio.</span></span>
+            <span class="line"><span data-i18n="hero.l2">Construyo el producto.</span></span>
+            <span class="line"><span><em data-i18n="hero.l3">Lo llevo al mercado.</em></span></span>
           </h1>
         </div>
 
         <!-- Recorrido: un caso real atraviesa negocio → producto → mercado -->
-        <div class="journey" aria-label="Ejemplos reales del recorrido de negocio a producto a mercado">
-          <p class="jr-case"><span>Caso</span> <b class="jr-name">Envi</b> <i class="jr-count">01 / 05</i></p>
+        <div class="journey" aria-label="Ejemplos reales del recorrido de negocio a producto a mercado" data-i18n-attr="aria-label:jr.aria">
+          <p class="jr-case"><span data-i18n="jr.case">Caso</span> <b class="jr-name">Envi</b> <i class="jr-count">01 / 05</i></p>
           <div class="jr-nodes">
             <span class="jr-line" aria-hidden="true"><i class="jr-pulse"></i></span>
-            <div class="jr-node"><span class="jr-ico" aria-hidden="true"></span><span class="jr-k">01 — Negocio</span><p class="jr-t">La inflación esconde el costo real</p></div>
-            <div class="jr-node"><span class="jr-ico" aria-hidden="true"></span><span class="jr-k">02 — Producto</span><p class="jr-t">Costeo FIFO y CPP</p></div>
-            <div class="jr-node"><span class="jr-ico" aria-hidden="true"></span><span class="jr-k">03 — Mercado</span><p class="jr-t">En producción</p></div>
+            <div class="jr-node"><span class="jr-ico" aria-hidden="true"></span><span class="jr-k" data-i18n="jr.k1">01 — Negocio</span><p class="jr-t">La inflación esconde el costo real</p></div>
+            <div class="jr-node"><span class="jr-ico" aria-hidden="true"></span><span class="jr-k" data-i18n="jr.k2">02 — Producto</span><p class="jr-t">Costeo FIFO y CPP</p></div>
+            <div class="jr-node"><span class="jr-ico" aria-hidden="true"></span><span class="jr-k" data-i18n="jr.k3">03 — Mercado</span><p class="jr-t">En producción</p></div>
           </div>
-          <div class="jr-dots" role="group" aria-label="Elegir caso">
-            <button type="button" class="on" aria-label="Caso Envi" data-cursor="Envi"></button>
-            <button type="button" aria-label="Caso Settler" data-cursor="Settler"></button>
-            <button type="button" aria-label="Caso Agente de turnos" data-cursor="Turnos"></button>
-            <button type="button" aria-label="Caso Industrially" data-cursor="Industrially"></button>
-            <button type="button" aria-label="Caso FieldOps AI" data-cursor="FieldOps"></button>
+          <div class="jr-dots" role="group" aria-label="Elegir caso" data-i18n-attr="aria-label:jr.pick">
+            <button type="button" class="on" aria-label="Caso Envi" data-i18n-attr="aria-label:jr.d1" data-cursor="Envi"></button>
+            <button type="button" aria-label="Caso Settler" data-i18n-attr="aria-label:jr.d2" data-cursor="Settler"></button>
+            <button type="button" aria-label="Caso Agente de turnos" data-i18n-attr="aria-label:jr.d3;data-cursor:jr.c3" data-cursor="Turnos"></button>
+            <button type="button" aria-label="Caso Industrially" data-i18n-attr="aria-label:jr.d4" data-cursor="Industrially"></button>
+            <button type="button" aria-label="Caso FieldOps AI" data-i18n-attr="aria-label:jr.d5" data-cursor="FieldOps"></button>
           </div>
         </div>
       </div>
 
       <ul class="hero-disc">
-        <li><span>01</span><b>Producto</b><p>Discovery con clientes y decisiones de producto.</p></li>
-        <li><span>02</span><b>Ingeniería</b><p>Full stack en producción: Vue, Node y MySQL.</p></li>
-        <li><span>03</span><b>IA aplicada</b><p>Agentes, integración de tools y evals.</p></li>
-        <li><span>04</span><b>Ventas B2B</b><p>Outbound, posicionamiento y cierre.</p></li>
+        <li><span>01</span><b data-i18n="disc.1b">IA aplicada</b><p data-i18n="disc.1p">Agentes en producción: tools, evals y validación de acciones.</p></li>
+        <li><span>02</span><b data-i18n="disc.2b">Ingeniería</b><p data-i18n="disc.2p">Full stack en producción: Vue, Node y MySQL.</p></li>
+        <li><span>03</span><b data-i18n="disc.3b">Producto</b><p data-i18n="disc.3p">Discovery con clientes y decisiones de producto.</p></li>
+        <li><span>04</span><b data-i18n="disc.4b">Ventas B2B</b><p data-i18n="disc.4p">Outbound, posicionamiento y cierre.</p></li>
       </ul>
     </section>
 
     <!-- Intro: las palabras se encienden -->
     <section class="intro" id="intro">
-      <p class="label">( Cómo trabajo )</p>
-      <p class="lit-text" data-lit>Me siento con el cliente, entiendo qué le duele y lo convierto en software que funciona en producción. Y cuando hace falta, salgo puerta por puerta a contárselo a la próxima empresa.</p>
+      <p class="label" data-i18n="intro.label">( Cómo trabajo )</p>
+      <p class="lit-text" data-lit data-i18n="intro.lit">Me siento con el cliente, entiendo qué le duele y lo convierto en software que funciona en producción. Y cuando hace falta, salgo puerta por puerta a contárselo a la próxima empresa.</p>
       <div class="intro-foot">
-        <p>Ingeniería de producto, agentes de IA, posicionamiento y ventas consultivas. Me muevo en todo el recorrido: del primer problema mal definido hasta el deploy, el soporte y la venta.</p>
-        <a href="#sobre-mi" class="round-btn magnetic" data-cursor="Leer"><span>Sobre mí</span></a>
+        <p data-i18n="intro.foot">Agentes de IA, ingeniería de producto, posicionamiento y ventas consultivas. Me muevo en todo el recorrido: del primer problema mal definido hasta el deploy, el soporte y la venta.</p>
+        <a href="#sobre-mi" class="round-btn magnetic" data-cursor="Leer" data-i18n-attr="data-cursor:cur.read"><span data-i18n="intro.btn">Sobre mí</span></a>
       </div>
     </section>
 
     <!-- Marquee de rubros -->
     <div class="band" aria-hidden="true">
-      <div class="band-track">
+      <div class="band-track" data-i18n="band">
         <span>Oil &amp; Gas</span><i>✦</i><span><em>Lácteos</em></span><i>✦</i><span>Metalúrgica</span><i>✦</i><span><em>Alimenticia</em></span><i>✦</i><span>Agro</span><i>✦</i><span><em>Servicios</em></span><i>✦</i><span>Retail</span><i>✦</i>
         <span>Oil &amp; Gas</span><i>✦</i><span><em>Lácteos</em></span><i>✦</i><span>Metalúrgica</span><i>✦</i><span><em>Alimenticia</em></span><i>✦</i><span>Agro</span><i>✦</i><span><em>Servicios</em></span><i>✦</i><span>Retail</span><i>✦</i>
       </div>
@@ -105,88 +106,320 @@
     <!-- ===================== AGENTES DE IA ===================== -->
     <section class="agents" id="agentes" aria-labelledby="agentes-title">
       <div class="work-head">
-        <p class="label">( Agentes de IA )</p>
-        <h2 id="agentes-title" class="section-title">Conversaciones que<br><em>terminan en una acción real.</em></h2>
-        <div class="ch-role"><span class="ch-role-k">Mi rol</span><ul><li>Diseño de flujos conversacionales</li><li>Integración de tools al backend</li><li>Evals desde cero</li><li>Prompt caching</li><li>Seguridad y validación de acciones</li></ul></div>
+        <p class="label" data-i18n="ag.label">( Agentes de IA )</p>
+        <h2 id="agentes-title" class="section-title" data-i18n="ag.title">Conversaciones que<br><em>terminan en una acción real.</em></h2>
+        <div class="ch-role"><span class="ch-role-k" data-i18n="role.k">Mi rol</span><ul data-i18n="ag.roles"><li>Diseño de flujos conversacionales</li><li>Integración de tools al backend</li><li>Evals desde cero</li><li>Prompt caching</li><li>Seguridad y validación de acciones</li></ul></div>
       </div>
 
-      <p class="agents-group">En Quantic Core</p>
+      <p class="agents-group" data-i18n="grp.qc">En Quantic Core</p>
       <div class="agents-grid">
-        <article class="agent agent-feature">
+        <article class="agent agent-feature on-brand" data-brand="thalk">
           <div class="agent-top">
             <span class="jr-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><rect class="d" x="6" y="10" width="36" height="31" rx="4"/><path class="d" style="--d:.3s" d="M6 18h36M15 6v8M33 6v8"/><rect class="p of" x="27" y="25" width="9" height="9" rx="2" style="--d:.8s"/></svg></span>
-            <span class="agent-tag">Quantic Core · WhatsApp · En producción</span>
+            <span class="agent-tag" data-i18n="tu.tag">Quantic Core · WhatsApp · En producción</span>
           </div>
           <div class="agent-split">
             <div>
-              <h4>Agente de turnos</h4>
-              <p>El cliente reserva por WhatsApp con un chat muy natural y el turno queda en el calendario de la app. También lo modifica o lo cancela, sin pasar por una persona.</p>
+              <h4 data-i18n="tu.h">Agente de turnos</h4>
+              <p data-i18n="tu.p">El cliente reserva por WhatsApp con un chat muy natural y el turno queda en el calendario de la app. También lo modifica o lo cancela, sin pasar por una persona.</p>
             </div>
             <div class="agent-visual mini-chat" aria-hidden="true">
-              <p class="msg in">Hola! ¿tenés lugar el jueves a la tarde?</p>
-              <p class="msg out">¡Hola! Tengo 16:30 o 18:00. ¿Cuál te queda mejor?</p>
-              <p class="msg in">16:30 porfa</p>
-              <p class="msg out">Listo, quedaste el jueves a las 16:30 ✓</p>
-              <p class="msg sys">Turno registrado en el calendario</p>
+              <p class="msg in" data-i18n="tu.m1">Hola! ¿tenés lugar el jueves a la tarde?</p>
+              <p class="msg out" data-i18n="tu.m2">¡Hola! Tengo 16:30 o 18:00. ¿Cuál te queda mejor?</p>
+              <p class="msg in" data-i18n="tu.m3">16:30 porfa</p>
+              <p class="msg out" data-i18n="tu.m4">Listo, quedaste el jueves a las 16:30 ✓</p>
+              <p class="msg sys" data-i18n="tu.m5">Turno registrado en el calendario</p>
+              <span class="illus" data-i18n="illus">ilustración</span>
             </div>
           </div>
+
+          <details class="build">
+            <summary><span data-i18n="b.sum">Cómo está construido</span><i aria-hidden="true">+</i></summary>
+            <div class="build-body">
+              <figure class="bd-fig">
+                <div class="bd-scroll">
+                  <svg class="dg" viewBox="0 0 1000 470" role="img" aria-label="Flujo de un turno: el mensaje llega por WhatsApp, se arma el contexto, un loop ReAct alterna entre el modelo y las tools, y tres controles revisan la respuesta antes de enviarla." data-i18n-attr="aria-label:dgT.aria">
+                    <defs>
+                      <marker id="dgTa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="hd" d="M0,0 L10,5 L0,10 z"/></marker>
+                      <marker id="dgTo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="hd-o" d="M0,0 L10,5 L0,10 z"/></marker>
+                    </defs>
+
+                    <rect class="box" x="10" y="155" width="110" height="70" rx="12"/>
+                    <text class="t" x="65" y="186" text-anchor="middle">WhatsApp</text>
+                    <text x="65" y="205" text-anchor="middle" data-i18n="dgT.via">vía Thalk</text>
+                    <path class="ar" d="M120 190H138" marker-end="url(#dgTa)"/>
+
+                    <rect class="box" x="140" y="110" width="140" height="160" rx="12"/>
+                    <text class="t" x="210" y="138" text-anchor="middle" data-i18n="dgT.ctx">Contexto</text>
+                    <text x="210" y="168" text-anchor="middle" data-i18n="dgT.ctx1">zona horaria</text>
+                    <text x="210" y="190" text-anchor="middle" data-i18n="dgT.ctx2">últimos 20 mensajes</text>
+                    <text x="210" y="212" text-anchor="middle" data-i18n="dgT.ctx3">prompt cacheado</text>
+                    <text x="210" y="234" text-anchor="middle" data-i18n="dgT.ctx4">tools según el rol</text>
+
+                    <rect class="frame" x="300" y="16" width="690" height="444" rx="16"/>
+                    <text class="k" x="318" y="40" data-i18n="dgT.budget">PRESUPUESTO DEL TURNO · 120 S</text>
+                    <path class="ar" d="M280 190H305V132H338" marker-end="url(#dgTa)"/>
+
+                    <rect class="panel" x="320" y="60" width="250" height="250" rx="14"/>
+                    <text class="k" x="336" y="84" data-i18n="dgT.loop">LOOP REACT · MÁX. 8 VUELTAS</text>
+                    <rect class="box" x="340" y="104" width="210" height="56" rx="10"/>
+                    <text class="t" x="445" y="128" text-anchor="middle">LLM · Claude Haiku 4.5</text>
+                    <text x="445" y="147" text-anchor="middle" data-i18n="dgT.llm">elige una tool o responde</text>
+                    <rect class="box" x="340" y="234" width="210" height="56" rx="10"/>
+                    <text class="t" x="445" y="258" text-anchor="middle">Tool</text>
+                    <text x="445" y="277" text-anchor="middle" data-i18n="dgT.tool">valida y llama al backend</text>
+                    <path class="ar" d="M400 160V232" marker-end="url(#dgTa)"/>
+                    <text class="m" x="408" y="200">tool_use</text>
+                    <path class="ar" d="M490 234V162" marker-end="url(#dgTa)"/>
+                    <text class="m" x="498" y="200" data-i18n="dgT.result">resultado</text>
+                    <text class="m" x="336" y="340" data-i18n="dgT.err1">cualquier excepción →</text>
+                    <text class="m" x="336" y="358" data-i18n="dgT.err2">texto seguro + status</text>
+
+                    <path class="ar" d="M550 120H580V99H603" marker-end="url(#dgTa)"/>
+
+                    <rect class="guard" x="605" y="64" width="200" height="70" rx="10"/>
+                    <text class="t" x="705" y="94" text-anchor="middle" data-i18n="dgT.g1a">¿Afirma una acción o un</text>
+                    <text class="t" x="705" y="112" text-anchor="middle" data-i18n="dgT.g1b">precio sin tool exitosa?</text>
+                    <path class="ar" d="M805 99H828" marker-end="url(#dgTa)"/>
+                    <text class="m" x="817" y="91" text-anchor="middle" data-i18n="dg.yes">sí</text>
+                    <rect class="box" x="830" y="64" width="155" height="70" rx="10"/>
+                    <text class="t" x="907" y="94" text-anchor="middle" data-i18n="dgT.r1a">Autocorrección</text>
+                    <text x="907" y="113" text-anchor="middle" data-i18n="dgT.r1b">1 reintento acotado</text>
+                    <path class="ar ar-o" d="M907 64V50H530V102" marker-end="url(#dgTo)"/>
+                    <text class="m" x="720" y="44" text-anchor="middle" data-i18n="dgT.retry">vuelve al loop</text>
+
+                    <path class="ar" d="M705 134V172" marker-end="url(#dgTa)"/>
+                    <text class="m" x="713" y="157">no</text>
+
+                    <rect class="guard" x="605" y="174" width="200" height="70" rx="10"/>
+                    <text class="t" x="705" y="204" text-anchor="middle" data-i18n="dgT.g2a">¿Preguntó un precio</text>
+                    <text class="t" x="705" y="222" text-anchor="middle" data-i18n="dgT.g2b">y falta el monto?</text>
+                    <path class="ar" d="M805 209H828" marker-end="url(#dgTa)"/>
+                    <text class="m" x="817" y="201" text-anchor="middle" data-i18n="dg.yes">sí</text>
+                    <rect class="box" x="830" y="174" width="155" height="70" rx="10"/>
+                    <text class="t" x="907" y="204" text-anchor="middle" data-i18n="dgT.r2a">Reintento</text>
+                    <text x="907" y="223" text-anchor="middle" data-i18n="dgT.r2b">solo tools de lectura</text>
+
+                    <path class="ar" d="M705 244V282" marker-end="url(#dgTa)"/>
+                    <text class="m" x="713" y="267">no</text>
+
+                    <rect class="guard" x="605" y="284" width="200" height="70" rx="10"/>
+                    <text class="t" x="705" y="314" text-anchor="middle" data-i18n="dgT.g3a">¿Promete una persona</text>
+                    <text class="t" x="705" y="332" text-anchor="middle" data-i18n="dgT.g3b">sin pedir el pase?</text>
+                    <path class="ar" d="M805 319H828" marker-end="url(#dgTa)"/>
+                    <text class="m" x="817" y="311" text-anchor="middle" data-i18n="dg.yes">sí</text>
+                    <rect class="box" x="830" y="284" width="155" height="70" rx="10"/>
+                    <text class="t" x="907" y="314" text-anchor="middle" data-i18n="dgT.r3a">Pase a persona</text>
+                    <text x="907" y="333" text-anchor="middle" data-i18n="dgT.r3b">cumple la promesa</text>
+
+                    <path class="ar" d="M705 354V382" marker-end="url(#dgTa)"/>
+                    <text class="m" x="713" y="372">no</text>
+
+                    <rect class="ok" x="605" y="384" width="380" height="60" rx="10"/>
+                    <text class="t ink" x="795" y="409" text-anchor="middle" data-i18n="dgT.outa">Respuesta al cliente</text>
+                    <text class="ink" x="795" y="429" text-anchor="middle" data-i18n="dgT.outb">si hubo pase, Thalk pausa el bot</text>
+                  </svg>
+                </div>
+                <figcaption data-i18n="tu.cap">El modelo decide qué tools llamar; lo que dice que hizo lo comprueba el código. Los tres controles naranjas corren después de redactar la respuesta y antes de que llegue al cliente.</figcaption>
+              </figure>
+
+              <div class="bd-cols">
+                <section class="bd-block">
+                  <h5 data-i18n="b.arch">Arquitectura</h5>
+                  <ul class="bd-list" data-i18n="tu.arch">
+                    <li><b>Orquestación.</b> Loop ReAct sobre Claude Haiku 4.5: el modelo elige una tool o responde, con hasta 8 vueltas y 120 s por turno. Antes se arma el contexto (últimos 20 mensajes, zona horaria del negocio y las tools del rol), con las reglas estáticas cacheadas.</li>
+                    <li><b>Tools.</b> 11, en cuatro grupos: lectura (servicios y precios, disponibilidad, turnos del cliente, cargo por cancelar), escritura en la agenda (crear, modificar, cancelar), alta de cliente y pase a una persona.</li>
+                    <li><b>Validación antes de ejecutar.</b> Cada acción pasa por permisos por rol, un bloqueo que impide cancelar en el mismo mensaje en que se mostró el cargo, la validación propia de la tool (confirmación, identidad, IDs reales, sin duplicados en el día) y las reglas reales de la agenda. Después, un verificador exige que toda acción o precio que afirme la respuesta esté respaldado por una tool exitosa.</li>
+                    <li><b>Fallas de tools.</b> Las lecturas se reintentan hasta 3 veces; las escrituras, solo si el pedido no llegó, porque sin clave de idempotencia un timeout puede significar que la reserva ya existe. Si ya hubo una escritura, el mensaje al cliente se arma desde esa escritura y no desde lo que dijo el modelo.</li>
+                  </ul>
+                </section>
+                <section class="bd-block">
+                  <h5 data-i18n="b.evals">Diseño de evals</h5>
+                  <p data-i18n="tu.evals">25 escenarios conversacionales, tres corridas cada uno, contra un backend simulado. Un cliente simulado conversa con el agente y un juez califica cada conversación completa con una rúbrica. El evaluador se revisa igual que el agente: no todo FAIL es del bot.</p>
+                  <div class="bd-scn">
+                    <span class="bd-k" data-i18n="tu.scnk">Ejemplo de escenario · dos pedidos en un mensaje</span>
+                    <p class="bd-quote" data-i18n="tu.scnq">“¿Cuánto sale la coloración? Y de paso quiero turno para un brushing el viernes.”</p>
+                    <p data-i18n="tu.scnp">Pasa si la respuesta da el precio del servicio que se preguntó y deja el turno reservado.</p>
+                  </div>
+                </section>
+              </div>
+
+              <section class="bd-block">
+                <h5 data-i18n="tu.failh">Qué falló y qué cambié</h5>
+                <div class="bd-fails">
+                  <div class="bd-fail">
+                    <div class="bd-ft"><b data-i18n="tu.f1n">Dos pedidos en un mensaje</b></div>
+                    <p data-i18n="tu.f1w">Dio el precio de otro servicio. El control de precio buscaba <em>algún</em> monto en la respuesta, y el del servicio equivocado alcanzó.</p>
+                    <p class="bd-fix" data-i18n="tu.f1x">Cambio: comprobar el monto del servicio que se preguntó, no cualquier monto.</p>
+                  </div>
+                  <div class="bd-fail">
+                    <div class="bd-ft"><b data-i18n="tu.f2n">Horario ocupado</b></div>
+                    <p data-i18n="tu.f2w">Anunció la reserva en futuro antes de hacerla y el juez lo leyó como una oferta. La reserva se hizo en el mensaje siguiente.</p>
+                    <p class="bd-fix" data-i18n="tu.f2x">Cambio: usar siempre los patrones de “anunciado sin escritura”, no solo cuando falla el juez.</p>
+                  </div>
+                  <div class="bd-fail">
+                    <div class="bd-ft"><b data-i18n="tu.f3n">Ráfaga de mensajes</b></div>
+                    <p data-i18n="tu.f3w">Trató bien la ráfaga como un solo pedido, pero después preguntó un dato por mensaje e ignoró que el cliente había dicho “con cualquiera”.</p>
+                    <p class="bd-fix" data-i18n="tu.f3x">Cambio: pedir en una sola pregunta todo lo que falta. Y revisar la rúbrica, que castiga preguntas necesarias.</p>
+                  </div>
+                  <div class="bd-fail">
+                    <div class="bd-ft"><b data-i18n="tu.f4n">Backend caído al reservar</b></div>
+                    <p data-i18n="tu.f4w">Avisó que la reserva había fallado, pero la despedida dio el turno por hecho.</p>
+                    <p class="bd-fix" data-i18n="tu.f4x">Hecho: si una acción falla dos veces, pasa la charla a una persona con un texto fijo que dice que no quedó registrado. La despedida contradictoria todavía no tiene un control.</p>
+                  </div>
+                </div>
+                <p data-i18n="tu.beforep">Antes de esa corrida, los evals ya habían cambiado el código:</p>
+                <ul class="bd-list" data-i18n="tu.before">
+                  <li>Reservó dos veces el mismo servicio para la misma persona → no se reserva un duplicado en el día.</li>
+                  <li>Inventó un precio a partir del historial → un monto en la respuesta exige una consulta de precio exitosa en ese turno.</li>
+                  <li>Dijo “no tiene cargo” sin consultar la política → hablar del cargo exige consultar la cancelación.</li>
+                  <li>Ignoraba la pregunta de precio si venía junto a una reserva, y ajustar el prompt no lo arregló → un reintento acotado, solo con tools de lectura. Lo que el prompt no garantiza, lo garantiza el código.</li>
+                </ul>
+              </section>
+            </div>
+          </details>
         </article>
 
-        <article class="agent agent-feature">
+        <article class="agent agent-feature on-brand" data-brand="envi">
           <div class="agent-top">
-            <span class="jr-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="d" d="M7 11h34v21H21l-8 7v-7H7z"/><circle class="dot" cx="17" cy="21.5" r="2.2"/><circle class="dot" cx="24" cy="21.5" r="2.2" style="--d:.15s"/><circle class="dot" cx="31" cy="21.5" r="2.2" style="--d:.3s;fill:var(--orange)"/></svg></span>
+            <span class="jr-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="d" d="M7 11h34v21H21l-8 7v-7H7z"/><circle class="dot" cx="17" cy="21.5" r="2.2"/><circle class="dot" cx="24" cy="21.5" r="2.2" style="--d:.15s"/><circle class="dot" cx="31" cy="21.5" r="2.2" style="--d:.3s;fill:var(--accent)"/></svg></span>
             <span class="agent-tag">Quantic Core · Onboarding</span>
           </div>
           <div class="agent-split">
             <div>
               <h4>Settler</h4>
-              <p>Crea demos y suscripciones, las extiende o las modifica. Reemplaza un onboarding de 16 pasos por una conversación guiada, para el equipo interno y para una versión alternativa de la landing.</p>
-              <p class="agent-small">Evals de finalización, flujos, prompt injection, duplicados y datos sensibles. Prompt caching y validación de acciones.</p>
+              <p data-i18n="se.p">Crea demos y suscripciones, las extiende o las modifica. Reemplaza un onboarding de 16 pasos por una conversación guiada, para el equipo interno y para una versión alternativa de la landing.</p>
+              <p class="agent-small" data-i18n="se.small">Evals de finalización, flujos, prompt injection, duplicados y datos sensibles. Prompt caching y validación de acciones.</p>
             </div>
             <div class="agent-visual collapse" aria-hidden="true">
-              <div class="pills"><span>Datos</span><span>Rubro</span><span>Plan</span><span>Usuario</span><span>Sucursal</span><span>Depósito</span><span>Moneda</span><span>Impuestos</span><span>Productos</span><span>Precios</span><span>Stock</span><span>Clientes</span><span>Caja</span><span>Permisos</span><span>Mails</span><span>Confirmar</span></div>
-              <p class="one">“Contame de tu negocio<br>y te armo la demo.”</p>
+              <div class="pills" data-i18n="se.pills"><span>Datos</span><span>Rubro</span><span>Plan</span><span>Usuario</span><span>Sucursal</span><span>Depósito</span><span>Moneda</span><span>Impuestos</span><span>Productos</span><span>Precios</span><span>Stock</span><span>Clientes</span><span>Caja</span><span>Permisos</span><span>Mails</span><span>Confirmar</span></div>
+              <p class="one" data-i18n="se.one">“Contame de tu negocio<br>y te armo la demo.”</p>
             </div>
           </div>
+
+          <details class="build">
+            <summary><span data-i18n="b.sum">Cómo está construido</span><i aria-hidden="true">+</i></summary>
+            <div class="build-body">
+              <figure class="bd-fig">
+                <div class="bd-scroll">
+                  <svg class="dg" viewBox="0 0 1000 430" role="img" aria-label="Flujo de un turno del Settler: la landing o el panel interno llaman al backend de la app, que fija el rol; el agente responde con un toque guionado o con un loop ReAct, y un verificador revisa lo que la respuesta afirma." data-i18n-attr="aria-label:dgS.aria">
+                    <defs>
+                      <marker id="dgSa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="hd" d="M0,0 L10,5 L0,10 z"/></marker>
+                    </defs>
+
+                    <rect class="box" x="10" y="105" width="150" height="64" rx="12"/>
+                    <text class="t" x="85" y="133" text-anchor="middle">Landing</text>
+                    <text x="85" y="153" text-anchor="middle" data-i18n="dgS.land">prospecto anónimo</text>
+                    <rect class="box" x="10" y="255" width="150" height="64" rx="12"/>
+                    <text class="t" x="85" y="283" text-anchor="middle" data-i18n="dgS.panel">Panel interno</text>
+                    <text x="85" y="303" text-anchor="middle" data-i18n="dgS.team">equipo interno</text>
+                    <path class="ar" d="M160 137H198" marker-end="url(#dgSa)"/>
+                    <path class="ar" d="M160 287H198" marker-end="url(#dgSa)"/>
+
+                    <rect class="panel" x="200" y="80" width="180" height="264" rx="14"/>
+                    <text class="t" x="290" y="110" text-anchor="middle" data-i18n="dgS.be">Backend de la app</text>
+                    <text x="290" y="142" text-anchor="middle" data-i18n="dgS.be1">valida el token</text>
+                    <text x="290" y="164" text-anchor="middle" data-i18n="dgS.be2">fija el rol por canal</text>
+                    <text x="290" y="186" text-anchor="middle">rate limit</text>
+                    <text x="290" y="208" text-anchor="middle" data-i18n="dgS.be4">guarda el historial</text>
+                    <text class="k" x="290" y="300" text-anchor="middle" data-i18n="dgS.be5">EL MODELO NO ELIGE</text>
+                    <text class="k" x="290" y="318" text-anchor="middle" data-i18n="dgS.be6">SU PROPIO ROL</text>
+
+                    <rect class="frame" x="400" y="16" width="590" height="404" rx="16"/>
+                    <text class="k" x="418" y="40" data-i18n="dgS.turn">TURNO · 120 S</text>
+                    <path class="ar" d="M380 212H405V92H428" marker-end="url(#dgSa)"/>
+
+                    <rect class="guard" x="430" y="60" width="230" height="64" rx="10"/>
+                    <text class="t" x="545" y="88" text-anchor="middle" data-i18n="dgS.sc">¿Toque guionado?</text>
+                    <text x="545" y="108" text-anchor="middle" data-i18n="dgS.sc2">botones fijos de la landing</text>
+                    <path class="ar" d="M660 92H698" marker-end="url(#dgSa)"/>
+                    <text class="m" x="679" y="84" text-anchor="middle" data-i18n="dg.yes">sí</text>
+                    <rect class="ok" x="700" y="60" width="280" height="64" rx="10"/>
+                    <text class="t ink" x="840" y="88" text-anchor="middle" data-i18n="dgS.fix">Respuesta fija</text>
+                    <text class="ink" x="840" y="108" text-anchor="middle" data-i18n="dgS.fix2">sin llamar al modelo</text>
+                    <path class="ar" d="M545 124V150" marker-end="url(#dgSa)"/>
+                    <text class="m" x="553" y="141">no</text>
+
+                    <rect class="panel" x="430" y="152" width="230" height="176" rx="14"/>
+                    <text class="k" x="446" y="174" data-i18n="dgS.loop">LOOP REACT · MÁX. 6 VUELTAS</text>
+                    <rect class="box" x="446" y="186" width="198" height="50" rx="10"/>
+                    <text class="t" x="545" y="207" text-anchor="middle">LLM · Claude Haiku 4.5</text>
+                    <text x="545" y="225" text-anchor="middle" data-i18n="dgS.llm">decide la próxima acción</text>
+                    <rect class="box" x="446" y="264" width="198" height="50" rx="10"/>
+                    <text class="t" x="545" y="285" text-anchor="middle" data-i18n="dgS.g">Permisos → tool</text>
+                    <text x="545" y="303" text-anchor="middle" data-i18n="dgS.g2">rol, turno y datos completos</text>
+                    <path class="ar" d="M500 236V262" marker-end="url(#dgSa)"/>
+                    <path class="ar" d="M590 264V238" marker-end="url(#dgSa)"/>
+
+                    <path class="ar" d="M660 212H698" marker-end="url(#dgSa)"/>
+                    <rect class="guard" x="700" y="160" width="280" height="78" rx="10"/>
+                    <text class="t" x="840" y="186" text-anchor="middle" data-i18n="dgS.v">Verificación de afirmaciones</text>
+                    <text x="840" y="206" text-anchor="middle" data-i18n="dgS.v2">¿dice que creó o extendió algo</text>
+                    <text x="840" y="224" text-anchor="middle" data-i18n="dgS.v3">sin una tool exitosa?</text>
+                    <path class="ar" d="M900 238V258" marker-end="url(#dgSa)"/>
+                    <text class="m" x="908" y="252" data-i18n="dg.yes">sí</text>
+                    <rect class="box" x="790" y="260" width="190" height="60" rx="10"/>
+                    <text class="t" x="885" y="284" text-anchor="middle" data-i18n="dgS.a">Autocorrección</text>
+                    <text x="885" y="303" text-anchor="middle" data-i18n="dgS.a2">1 pase; si no, texto seguro</text>
+                    <path class="ar" d="M740 238V348" marker-end="url(#dgSa)"/>
+                    <text class="m" x="748" y="300">no</text>
+                    <path class="ar" d="M885 320V348" marker-end="url(#dgSa)"/>
+
+                    <rect class="ok" x="430" y="350" width="550" height="56" rx="10"/>
+                    <text class="t ink" x="705" y="374" text-anchor="middle" data-i18n="dgS.out">Respuesta + formulario o botón</text>
+                    <text class="ink" x="705" y="394" text-anchor="middle" data-i18n="dgS.out2">contraseñas, tokens y links nunca pasan por el modelo</text>
+                  </svg>
+                </div>
+                <figcaption data-i18n="se.cap">El navegador nunca habla directo con el agente: el backend de la app decide el canal y, con eso, el rol. Desde la landing, el modelo no puede usar las tools del equipo interno.</figcaption>
+              </figure>
+
+              <div class="bd-cols">
+                <section class="bd-block">
+                  <h5 data-i18n="b.arch">Arquitectura</h5>
+                  <ul class="bd-list" data-i18n="se.arch">
+                    <li><b>Orquestación.</b> Dos canales: la landing, donde un prospecto se crea su demo, y un panel interno, donde el equipo da de alta cuentas y extiende demos. El agente no guarda estado: recibe el historial completo en cada turno y lo relee desde la caché. Los botones fijos de la landing se responden sin llamar al modelo.</li>
+                    <li><b>Tools.</b> 13, registradas por rol: al modelo solo le llegan las del rol del turno. Lecturas (rubros, planes, búsqueda de cuentas), escrituras (datos del onboarding, crear la demo, invitaciones, extender demos) y tools que arman formularios y botones.</li>
+                    <li><b>Validación antes de ejecutar.</b> Ocho controles entre el mensaje y la respuesta, y ninguno depende de que el modelo obedezca al prompt: permisos por rol y por turno, crear nunca en el mismo mensaje que el resumen previo, datos completos y resumen ya mostrado, y un verificador que no deja decir “creé la cuenta” sin una tool exitosa. Contraseñas y tokens nunca pasan por el modelo.</li>
+                    <li><b>Fallas de tools.</b> Lecturas con hasta 3 reintentos y backoff; escrituras solo si no llegó a conectar, porque crear no es idempotente. Un “ya estaba creada” se toma como éxito, sin duplicar. Una escritura dudosa nunca invita a repetir: el texto pide verificar antes de reintentar.</li>
+                  </ul>
+                </section>
+                <section class="bd-block">
+                  <h5 data-i18n="b.evals">Diseño de evals</h5>
+                  <p data-i18n="se.evals">29 escenarios que cubren que el alta termine, los flujos completos de cada canal, intentos de prompt injection, duplicados y el manejo de datos sensibles.</p>
+                </section>
+              </div>
+            </div>
+          </details>
         </article>
 
-        <article class="agent agent-half">
-          <div class="agent-top">
-            <span class="jr-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="d" d="M5 9h23v13H15l-5 4v-4H5z"/><path class="d o" style="--d:.5s" d="M43 21H20v13h14l5 4v-4h4z"/></svg></span>
-            <span class="agent-tag">Quantic Core · Thalk</span>
-          </div>
-          <h4>Agentes de Thalk</h4>
-          <p>Participé en la creación de los agentes del CRM conversacional.</p>
-        </article>
-
-        <article class="agent agent-half">
+        <article class="agent agent-wide on-brand" data-brand="industrially">
           <div class="agent-top">
             <span class="jr-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="d" d="M12 6h17l8 8v28H12z"/><path class="d" style="--d:.3s" d="M29 6v8h8"/><path class="d o" style="--d:.6s" d="M17 22h14M17 28h14M17 34h8"/></svg></span>
             <span class="agent-tag">Quantic Core · Industrially</span>
           </div>
-          <h4>Skills de Claude para ventas</h4>
-          <p>Personalizan la documentación comercial para cada empresa y rubro, pensando en escalar un equipo de ventas.</p>
+          <h4 data-i18n="sk.h">Skills de Claude para ventas</h4>
+          <p data-i18n="sk.p">Personalizan la documentación comercial para cada empresa y rubro, pensando en escalar un equipo de ventas.</p>
         </article>
       </div>
 
-      <p class="agents-group">Propios</p>
+      <p class="agents-group" data-i18n="grp.own">Propios</p>
       <div class="agents-grid">
-        <article class="agent agent-half">
+        <article class="agent agent-half on-brand" data-brand="smart-trip">
           <div class="agent-top">
             <span class="jr-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="d o" d="M8 38c6-2 4-12 12-11s8 7 14 3 4-14 8-17"/><circle class="p" cx="8" cy="38" r="3" style="--d:.2s;fill:currentColor;stroke:none"/><circle class="p" cx="20" cy="27" r="2.6" style="--d:.5s;fill:currentColor;stroke:none"/><circle class="p" cx="34" cy="30" r="2.6" style="--d:.8s;fill:currentColor;stroke:none"/><circle class="p of" cx="42" cy="13" r="3.4" style="--d:1.1s"/></svg></span>
             <span class="agent-tag">Smart Trip</span>
           </div>
-          <h4>Agente de itinerarios</h4>
-          <p>Arma recorridos según distancia, horarios e intereses. Después lo usé para agrupar industrias y planificar visitas puerta por puerta.</p>
+          <h4 data-i18n="st.h">Agente de itinerarios</h4>
+          <p data-i18n="st.p">Arma recorridos según distancia, horarios e intereses. Después lo usé para agrupar industrias y planificar visitas puerta por puerta.</p>
         </article>
 
-        <article class="agent agent-half">
+        <article class="agent agent-half on-brand" data-brand="fieldops">
           <div class="agent-top">
             <span class="jr-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="d" d="M14 29a7 7 0 0 1 .5-14 10 10 0 0 1 19.3 2.2A6 6 0 0 1 34 29z"/><path class="rain" style="--d:0s" d="M17 34v5"/><path class="rain" style="--d:.35s" d="M24 34v5"/><path class="rain" style="--d:.7s" d="M31 34v5"/></svg></span>
-            <span class="agent-tag">FieldOps AI · En desarrollo</span>
+            <span class="agent-tag" data-i18n="fo.tag">FieldOps AI · En desarrollo</span>
           </div>
-          <h4>Agentes para el agro</h4>
-          <p>Ayudan a productores a decidir frente al clima y a gestionar maquinaria y servicios de siembra, cosecha y fumigación.</p>
+          <h4 data-i18n="fo.h">Agentes para el agro</h4>
+          <p data-i18n="fo.p">Ayudan a productores a decidir frente al clima y a gestionar maquinaria y servicios de siembra, cosecha y fumigación.</p>
         </article>
       </div>
     </section>
@@ -194,129 +427,132 @@
     <!-- Índice -->
     <section class="work" id="trabajo" aria-labelledby="work-title">
       <div class="work-head">
-        <p class="label">( Proyectos )</p>
-        <h2 id="work-title" class="section-title">Cinco proyectos,<br><em>un mismo hilo:</em> problemas reales.</h2>
-        <p class="work-note">Envi, Thalk e Industrially son productos de <strong>Quantic Core</strong>. En cada uno cuento mi parte: un rol amplio, que fue del código a los clientes, el producto y la venta.</p>
+        <p class="label" data-i18n="wk.label">( Proyectos )</p>
+        <h2 id="work-title" class="section-title" data-i18n="wk.title">Cinco proyectos,<br><em>un mismo hilo:</em> problemas reales.</h2>
+        <p class="work-note" data-i18n="wk.note">Envi, Thalk e Industrially son productos de <strong>Quantic Core</strong>. En cada uno cuento mi parte: un rol amplio, que fue del código a los clientes, el producto y la venta.</p>
       </div>
       <ol class="index">
-        <li class="ix-group">En Quantic Core</li>
-        <li><a href="#envi" data-preview="0" data-cursor="Ver"><span class="ix-n">01</span><span class="ix-name">Envi</span><span class="ix-desc">ERP · Full stack, clientes, UX y producción</span><span class="ix-tag">Quantic Core</span></a></li>
-        <li><a href="#thalk" data-preview="2" data-cursor="Ver"><span class="ix-n">02</span><span class="ix-name">Thalk</span><span class="ix-desc">CRM conversacional · Posicionamiento y prospección</span><span class="ix-tag">Quantic Core</span></a></li>
-        <li><a href="#industrially" data-preview="3" data-cursor="Ver"><span class="ix-n">03</span><span class="ix-name">Industrially</span><span class="ix-desc">Software para industrias · Producto y CCO</span><span class="ix-tag">Quantic Core</span></a></li>
-        <li class="ix-group">Proyectos propios</li>
-        <li><a href="#smart-trip" data-preview="4" data-cursor="Ver"><span class="ix-n">04</span><span class="ix-name">Smart Trip</span><span class="ix-desc">Itinerarios con un agente</span><span class="ix-tag">Propio</span></a></li>
-        <li><a href="#fieldops" data-preview="5" data-cursor="Ver"><span class="ix-n">05</span><span class="ix-name">FieldOps AI</span><span class="ix-desc">Agentes para el agro frente al clima · En desarrollo</span><span class="ix-tag">Propio</span></a></li>
+        <li class="ix-group" data-i18n="grp.qc">En Quantic Core</li>
+        <li data-brand="envi"><a href="#envi" data-preview="0" data-cursor="Ver" data-i18n-attr="data-cursor:cur.see"><span class="ix-n">01</span><span class="ix-name">Envi</span><span class="ix-desc" data-i18n="ix.1">ERP · Full stack, clientes, UX y producción</span><span class="ix-tag">Quantic Core</span></a></li>
+        <li data-brand="thalk"><a href="#thalk" data-preview="2" data-cursor="Ver" data-i18n-attr="data-cursor:cur.see"><span class="ix-n">02</span><span class="ix-name">Thalk</span><span class="ix-desc" data-i18n="ix.2">CRM conversacional · Posicionamiento y prospección con IA</span><span class="ix-tag">Quantic Core</span></a></li>
+        <li data-brand="industrially"><a href="#industrially" data-preview="3" data-cursor="Ver" data-i18n-attr="data-cursor:cur.see"><span class="ix-n">03</span><span class="ix-name">Industrially</span><span class="ix-desc" data-i18n="ix.3">Software para industrias · Producto, skills de IA y CCO</span><span class="ix-tag">Quantic Core</span></a></li>
+        <li class="ix-group" data-i18n="ix.own">Proyectos propios</li>
+        <li data-brand="smart-trip"><a href="#smart-trip" data-preview="4" data-cursor="Ver" data-i18n-attr="data-cursor:cur.see"><span class="ix-n">04</span><span class="ix-name">Smart Trip</span><span class="ix-desc" data-i18n="ix.4">Itinerarios con un agente</span><span class="ix-tag" data-i18n="ix.tag">Propio</span></a></li>
+        <li data-brand="fieldops"><a href="#fieldops" data-preview="5" data-cursor="Ver" data-i18n-attr="data-cursor:cur.see"><span class="ix-n">05</span><span class="ix-name">FieldOps AI</span><span class="ix-desc" data-i18n="ix.5">Agentes para el agro frente al clima · En desarrollo</span><span class="ix-tag" data-i18n="ix.tag">Propio</span></a></li>
       </ol>
       <div class="preview" aria-hidden="true">
         <div class="preview-strip">
-          <div class="pv pv-0"><span>FIFO · CPP</span><b>Envi<i>.</i></b></div>
-          <div class="pv pv-1"><span>16 → 1</span><b>Agentes<i>.</i></b></div>
-          <div class="pv pv-2"><span>¿Atiende?</span><b>Thalk<i>.</i></b></div>
-          <div class="pv pv-3"><span>AOG Patagonia</span><b>Industrially<i>.</i></b></div>
-          <div class="pv pv-4"><span>3.8 km</span><b>Smart Trip<i>.</i></b></div>
-          <div class="pv pv-5"><span>70% lluvia</span><b>FieldOps<i>.</i></b></div>
+          <div class="pv pv-0 on-brand" data-brand="envi"><span data-i18n="pv.0">FIFO · CPP</span><b>Envi<i>.</i></b></div>
+          <div class="pv pv-1"><span>16 → 1</span><b data-i18n="pv.1">Agentes<i>.</i></b></div>
+          <div class="pv pv-2 on-brand" data-brand="thalk"><span data-i18n="pv.2">¿Atiende?</span><b>Thalk<i>.</i></b></div>
+          <div class="pv pv-3 on-brand" data-brand="industrially"><span data-i18n="pv.3">Módulo a medida</span><b>Industrially<i>.</i></b></div>
+          <div class="pv pv-4 on-brand" data-brand="smart-trip"><span>3.8 km</span><b>Smart Trip<i>.</i></b></div>
+          <div class="pv pv-5 on-brand" data-brand="fieldops"><span data-i18n="pv.5">70% lluvia</span><b>FieldOps<i>.</i></b></div>
         </div>
       </div>
     </section>
 
     <!-- ===================== 01 ENVI ===================== -->
-    <article class="chapter" id="envi" aria-labelledby="envi-title">
+    <article class="chapter on-brand" data-brand="envi" id="envi" aria-labelledby="envi-title">
       <header class="ch-head">
         <span class="ch-num" aria-hidden="true">01</span>
-        <div class="ch-meta"><span class="ch-owner">Quantic Core</span><span>ERP · SaaS B2B</span><span>Jul 2024 — hoy</span></div>
+        <div class="ch-meta"><span class="ch-owner">Quantic Core</span><span>ERP · SaaS B2B</span><span data-i18n="en.since">Jul 2024 — hoy</span></div>
         <h3 class="ch-title" id="envi-title">Envi<i>.</i></h3>
-        <p class="ch-lede">El ERP de Quantic Core, que crecía <em>escuchando a los clientes</em>. Desarrollaba lo que me encargaban, pero también me sentaba con ellos, interpretaba lo que necesitaban y lo convertía en funcionalidades.</p>
-        <div class="ch-role"><span class="ch-role-k">Mi rol</span><ul><li>Desarrollo full stack</li><li>Discovery con clientes</li><li>Tests de usabilidad y rediseño</li><li>Onboarding y landing</li><li>Producción y base de datos</li><li>Soporte y negociación</li><li>Liderazgo de devs</li></ul></div>
+        <p class="ch-lede" data-i18n="en.lede">El ERP de Quantic Core, que crecía <em>escuchando a los clientes</em>. Desarrollaba lo que me encargaban, pero también me sentaba con ellos, interpretaba lo que necesitaban y lo convertía en funcionalidades.</p>
+        <div class="ch-role"><span class="ch-role-k" data-i18n="role.k">Mi rol</span><ul data-i18n="en.roles"><li>Desarrollo full stack</li><li>Discovery con clientes</li><li>Tests de usabilidad y rediseño</li><li>Onboarding y landing</li><li>Producción y base de datos</li><li>Soporte y negociación</li></ul></div>
       </header>
 
       <div class="ch-body">
         <div class="stage" aria-hidden="true">
-          <div class="stage-bar"><i></i><i></i><i></i><span class="stage-path">envi / <b>costeo</b></span></div>
+          <div class="stage-bar"><i></i><i></i><i></i><span class="stage-path">envi / <b data-i18n="en.s0">costeo</b></span></div>
 
-          <div class="scene on" data-label="costeo">
-            <p class="sc-cap">Costo unitario · yerba 1 kg</p>
+          <div class="scene on" data-label="costeo" data-i18n-attr="data-label:en.s0">
+            <p class="sc-cap" data-i18n="en.cap0">Costo unitario · yerba 1 kg</p>
             <svg class="chart" viewBox="0 0 690 330">
               <g class="grid-lines"><path d="M40 40H580M40 110H580M40 180H580M40 250H580"/></g>
               <path class="ln ln-repo" d="M40 250C120 236 170 214 240 186S380 120 440 92 540 52 580 40"/>
               <path class="ln ln-cpp" d="M40 250C130 244 200 232 270 214S420 176 580 150"/>
               <path class="ln ln-fifo" d="M40 250C160 248 260 240 360 228S500 214 580 206"/>
-              <g class="ln-labels"><text x="586" y="44">reposición</text><text x="586" y="154">CPP</text><text x="586" y="210">FIFO</text></g>
+              <g class="ln-labels"><text x="586" y="44" data-i18n="en.repo">reposición</text><text x="586" y="154" data-i18n="en.cpp">CPP</text><text x="586" y="210">FIFO</text></g>
             </svg>
-            <p class="sc-note">Con inflación, el costo histórico <em>miente.</em></p>
+            <p class="sc-note" data-i18n="en.note">Con inflación, el costo histórico <em>miente.</em></p>
+            <span class="illus" data-i18n="illus">ilustración</span>
           </div>
 
-          <div class="scene" data-label="turnos">
-            <p class="sc-cap">Agenda · semana 42</p>
+          <div class="scene" data-label="turnos" data-i18n-attr="data-label:en.s1">
+            <p class="sc-cap" data-i18n="en.cap1">Agenda · semana 42</p>
             <div class="cal">
-              <span class="cal-d">Lun</span><span class="cal-d">Mar</span><span class="cal-d">Mié</span><span class="cal-d">Jue</span><span class="cal-d">Vie</span>
-              <span class="ev" style="--c:1;--r:2/4">Clase funcional</span>
-              <span class="ev ev-alt" style="--c:2;--r:3/5">Corte + color</span>
-              <span class="ev" style="--c:3;--r:2/3">Masaje</span>
-              <span class="ev ev-hot" style="--c:4;--r:4/6">16:30 · Nuevo turno</span>
-              <span class="ev ev-alt" style="--c:5;--r:2/4">Kinesio</span>
+              <span class="cal-d" data-i18n="d.mon">Lun</span><span class="cal-d" data-i18n="d.tue">Mar</span><span class="cal-d" data-i18n="d.wed">Mié</span><span class="cal-d" data-i18n="d.thu">Jue</span><span class="cal-d" data-i18n="d.fri">Vie</span>
+              <span class="ev" style="--c:1;--r:2/4" data-i18n="en.ev1">Clase funcional</span>
+              <span class="ev ev-alt" style="--c:2;--r:3/5" data-i18n="en.ev2">Corte + color</span>
+              <span class="ev" style="--c:3;--r:2/3" data-i18n="en.ev3">Masaje</span>
+              <span class="ev ev-hot" style="--c:4;--r:4/6" data-i18n="en.ev4">16:30 · Nuevo turno</span>
+              <span class="ev ev-alt" style="--c:5;--r:2/4" data-i18n="en.ev5">Kinesio</span>
               <span class="ev" style="--c:1;--r:5/7">Pilates</span>
             </div>
-            <div class="chip-card"><span>Membresía</span><b>8 clases / mes</b><i>activa</i></div>
+            <div class="chip-card" data-i18n="en.chip"><span>Membresía</span><b>8 clases / mes</b><i>activa</i></div>
+            <span class="illus" data-i18n="illus">ilustración</span>
           </div>
 
-          <div class="scene" data-label="rediseño">
-            <p class="sc-cap">Tests de usabilidad → rediseño</p>
+          <div class="scene" data-label="rediseño" data-i18n-attr="data-label:en.s2">
+            <p class="sc-cap" data-i18n="en.cap2">Tests de usabilidad → rediseño</p>
             <div class="ba">
-              <div class="ba-layer ba-before"><span class="ba-tag">antes</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="ba-layer ba-after"><span class="ba-tag">después</span><b></b><i></i><i></i><i></i></div>
+              <div class="ba-layer ba-before"><span class="ba-tag" data-i18n="en.before">antes</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="ba-layer ba-after"><span class="ba-tag" data-i18n="en.after">después</span><b></b><i></i><i></i><i></i></div>
               <span class="ba-handle"></span>
             </div>
           </div>
 
           <div class="scene" data-label="onboarding">
-            <p class="sc-cap">Wizard · creá tu demo</p>
+            <p class="sc-cap" data-i18n="en.cap3">Wizard · creá tu demo</p>
             <div class="wizard">
-              <ol class="wz-steps"><li>Empresa</li><li>Rubro</li><li>Demo lista</li></ol>
-              <div class="wz-field"><span>Nombre de la empresa</span><b>Tu Empresa S.A.</b></div>
-              <div class="wz-field"><span>Rubro</span><b>Mayorista de alimentos</b></div>
-              <div class="wz-btn">Crear mi demo →</div>
-              <p class="wz-tip">Tour guiado: empezá por acá</p>
+              <ol class="wz-steps" data-i18n="en.wz"><li>Empresa</li><li>Rubro</li><li>Demo lista</li></ol>
+              <div class="wz-field"><span data-i18n="en.wzf1">Nombre de la empresa</span><b data-i18n="en.wzv1">Tu Empresa S.A.</b></div>
+              <div class="wz-field"><span data-i18n="en.wzf2">Rubro</span><b data-i18n="en.wzv2">Mayorista de alimentos</b></div>
+              <div class="wz-btn" data-i18n="en.wzbtn">Crear mi demo →</div>
+              <p class="wz-tip" data-i18n="en.wztip">Tour guiado: empezá por acá</p>
             </div>
+            <span class="illus" data-i18n="illus">ilustración</span>
           </div>
 
-          <div class="scene" data-label="producción">
-            <p class="sc-cap">Grafana · logs de producción</p>
+          <div class="scene" data-label="producción" data-i18n-attr="data-label:en.s4">
+            <p class="sc-cap" data-i18n="en.cap4">Grafana · logs de producción</p>
             <svg class="spark" viewBox="0 0 600 120"><path d="M0 96L40 92 80 95 120 88 160 93 200 90 240 94 280 20 300 88 340 92 380 89 420 93 460 90 500 92 540 88 600 91"/></svg>
             <div class="logs">
               <p><span>14:02</span> <b class="err">ERR 500</b> POST /stock/transfer</p>
-              <p><span>14:06</span> reproducido en staging</p>
-              <p><span>14:19</span> fix + test playwright <b class="ok">pass</b></p>
-              <p><span>14:27</span> migración db <b class="ok">ok</b></p>
-              <p><span>14:32</span> deploy producción <b class="ok">✓</b></p>
+              <p data-i18n="en.log2"><span>14:06</span> reproducido en staging</p>
+              <p data-i18n="en.log3"><span>14:19</span> fix + test playwright <b class="ok">pass</b></p>
+              <p data-i18n="en.log4"><span>14:27</span> migración db <b class="ok">ok</b></p>
+              <p data-i18n="en.log5"><span>14:32</span> deploy producción <b class="ok">✓</b></p>
             </div>
           </div>
         </div>
 
         <div class="steps">
           <section class="step" data-step="0">
-            <span class="step-n">01 — El problema</span>
-            <h4>Un empresario y la inflación</h4>
-            <p>Me contaba su malestar: vendía, pero con la inflación no sabía cuánto le costaba realmente cada producto. De esa charla salió el <strong>costeo FIFO y CPP</strong>, un <strong>centro de costos</strong> y sus reportes, con modalidades simples y avanzadas.</p>
+            <span class="step-n" data-i18n="en.n1">01 — El problema</span>
+            <h4 data-i18n="en.h1">Un empresario y la inflación</h4>
+            <p data-i18n="en.p1">Me contaba su malestar: vendía, pero con la inflación no sabía cuánto le costaba realmente cada producto. De esa charla salió el <strong>costeo FIFO y CPP</strong>, un <strong>centro de costos</strong> y sus reportes, con modalidades simples y avanzadas.</p>
           </section>
           <section class="step" data-step="1">
-            <span class="step-n">02 — Otro cliente</span>
-            <h4>Abonos, membresías y turnos</h4>
-            <p>Desarrollamos un sistema de <strong>abonos y membresías</strong> y una <strong>agenda de turnos</strong> con calendario, personal, servicios, horarios configurables y actualizaciones en tiempo real por WebSockets. Iteramos a partir de demos con el cliente.</p>
+            <span class="step-n" data-i18n="en.n2">02 — Otro cliente</span>
+            <h4 data-i18n="en.h2">Abonos, membresías y turnos</h4>
+            <p data-i18n="en.p2">Desarrollamos un sistema de <strong>abonos y membresías</strong> y una <strong>agenda de turnos</strong> con calendario, personal, servicios, horarios configurables y actualizaciones en tiempo real por WebSockets. Iteramos a partir de demos con el cliente.</p>
           </section>
           <section class="step" data-step="2">
-            <span class="step-n">03 — Usabilidad</span>
-            <h4>Escuchar lo que no se dice</h4>
-            <p>Coordiné <strong>tests de usabilidad</strong> y nos dimos cuenta de que la interfaz y los flujos no eran claros. Participé activamente del <strong>rediseño desktop</strong> de toda la app y me encargué de una primera versión <strong>mobile</strong>.</p>
+            <span class="step-n" data-i18n="en.n3">03 — Usabilidad</span>
+            <h4 data-i18n="en.h3">Escuchar lo que no se dice</h4>
+            <p data-i18n="en.p3">Coordiné <strong>tests de usabilidad</strong> y nos dimos cuenta de que la interfaz y los flujos no eran claros. Participé activamente del <strong>rediseño desktop</strong> de toda la app y me encargué de una primera versión <strong>mobile</strong>.</p>
           </section>
           <section class="step" data-step="3">
-            <span class="step-n">04 — Onboarding</span>
-            <h4>Que el lead se cree su demo solo</h4>
-            <p>Diseñé e implementé un <strong>tour guiado</strong> para el onboarding autogestionado, la <strong>landing</strong> y un <strong>wizard con stepper</strong> para que cada lead que llega se cree su propia cuenta demo.</p>
+            <span class="step-n" data-i18n="en.n4">04 — Onboarding</span>
+            <h4 data-i18n="en.h4">Que el lead se cree su demo solo</h4>
+            <p data-i18n="en.p4">Diseñé e implementé un <strong>tour guiado</strong> para el onboarding autogestionado, la <strong>landing</strong> y un <strong>wizard con stepper</strong> para que cada lead que llega se cree su propia cuenta demo.</p>
           </section>
           <section class="step" data-step="4">
-            <span class="step-n">05 — Producción</span>
-            <h4>Hacerse cargo después del deploy</h4>
-            <p>Detección de bugs con logs de <strong>Grafana</strong>, fixes en prod, gestión y cambios de la base de datos y deploys. Soporte y negociación con clientes cuando había problemas, para llegar a un acuerdo. Y otros devs a cargo.</p>
+            <span class="step-n" data-i18n="en.n5">05 — Producción</span>
+            <h4 data-i18n="en.h5">Hacerse cargo después del deploy</h4>
+            <p data-i18n="en.p5">Detección de bugs con logs de <strong>Grafana</strong>, fixes en prod, gestión y cambios de la base de datos y deploys. Soporte y negociación con clientes cuando había problemas, para llegar a un acuerdo.</p>
             <ul class="tags"><li>Vue 3</li><li>Node / Elysia</li><li>MySQL</li><li>WebSockets</li><li>Grafana</li><li>Playwright</li></ul>
           </section>
         </div>
@@ -324,175 +560,156 @@
     </article>
 
     <!-- ===================== 02 THALK ===================== -->
-    <article class="chapter" id="thalk" aria-labelledby="thalk-title">
+    <article class="chapter on-brand" data-brand="thalk" id="thalk" aria-labelledby="thalk-title">
       <header class="ch-head">
         <span class="ch-num" aria-hidden="true">02</span>
-        <div class="ch-meta"><span class="ch-owner">Quantic Core</span><span>CRM conversacional</span></div>
+        <div class="ch-meta"><span class="ch-owner">Quantic Core</span><span data-i18n="th.meta">CRM conversacional</span></div>
         <h3 class="ch-title" id="thalk-title">Thalk<i>.</i></h3>
-        <p class="ch-lede">El CRM conversacional de Quantic Core. Ahí me enfoqué en herramientas de prospección <em>hechas con lo que piden los vendedores</em>, no con lo que imaginamos desde la oficina.</p>
-        <div class="ch-role"><span class="ch-role-k">Mi rol</span><ul><li>Decisiones de producto</li><li>Ejercicio de posicionamiento</li><li>Creación de agentes</li><li>Sección de prospección en frío</li></ul></div>
+        <p class="ch-lede" data-i18n="th.lede">El CRM conversacional de Quantic Core. Ahí me enfoqué en herramientas de prospección <em>hechas con lo que piden los vendedores</em>, no con lo que imaginamos desde la oficina.</p>
+        <div class="ch-role"><span class="ch-role-k" data-i18n="role.k">Mi rol</span><ul data-i18n="th.roles"><li>Decisiones de producto</li><li>Ejercicio de posicionamiento</li><li>Prospección con IA</li></ul></div>
       </header>
 
       <div class="ch-body">
         <div class="stage" aria-hidden="true">
-          <div class="stage-bar"><i></i><i></i><i></i><span class="stage-path">thalk / <b>posicionamiento</b></span></div>
+          <div class="stage-bar"><i></i><i></i><i></i><span class="stage-path">thalk / <b data-i18n="th.s0">posicionamiento</b></span></div>
 
-          <div class="scene on" data-label="posicionamiento">
+          <div class="scene on" data-label="posicionamiento" data-i18n-attr="data-label:th.s0">
             <div class="quad">
-              <span class="ax ax-y">más contexto</span><span class="ax ax-x">menos fricción</span>
-              <span class="dot" style="--x:22%;--y:70%">Planillas</span>
-              <span class="dot" style="--x:40%;--y:38%">CRM genérico</span>
-              <span class="dot" style="--x:62%;--y:62%">Mensajería suelta</span>
+              <span class="ax ax-y" data-i18n="th.axy">más contexto</span><span class="ax ax-x" data-i18n="th.axx">menos fricción</span>
+              <span class="dot" style="--x:22%;--y:70%" data-i18n="th.q1">Planillas</span>
+              <span class="dot" style="--x:40%;--y:38%" data-i18n="th.q2">CRM genérico</span>
+              <span class="dot" style="--x:62%;--y:62%" data-i18n="th.q3">Mensajería suelta</span>
               <span class="dot dot-me" style="--x:78%;--y:22%">Thalk</span>
             </div>
           </div>
 
-          <div class="scene" data-label="prospección">
+          <div class="scene" data-label="prospección" data-i18n-attr="data-label:th.s1">
             <div class="kit">
-              <div class="kit-main"><span>Landing on demand · IA</span><b class="typing">Para tu planta láctea: menos planillas, más producción.</b><i>Agendar charla →</i></div>
-              <div><span>Entregable</span><b>Propuesta a medida</b></div>
-              <div><span>Mensajes</span><b>Templates mail + WhatsApp</b></div>
+              <div class="kit-main"><span data-i18n="th.k1">Landing on demand · IA</span><b class="typing" data-i18n="th.k1b">Para tu planta láctea: menos planillas, más producción.</b><i data-i18n="th.k1c">Agendar charla →</i></div>
+              <div><span data-i18n="th.k2">Entregable</span><b data-i18n="th.k2b">Propuesta a medida</b></div>
+              <div><span data-i18n="th.k3">Mensajes</span><b data-i18n="th.k3b">Templates mail + WhatsApp</b></div>
             </div>
-          </div>
-
-          <div class="scene" data-label="llamadas">
-            <svg class="tree" viewBox="0 0 600 330">
-              <path class="t-edge" d="M300 64V110H150V160M300 110H450V160M150 206V250H80V270M150 250H220V270"/>
-              <path class="t-hot" d="M300 64V110H150V160M150 206V250H220V270"/>
-              <g class="t-node"><rect x="225" y="20" width="150" height="44" rx="22"/><text x="300" y="48">¿Atiende?</text></g>
-              <g class="t-node"><rect x="70" y="160" width="160" height="46" rx="23"/><text x="150" y="189">Sí · ¿2 minutos?</text></g>
-              <g class="t-node dim"><rect x="380" y="160" width="140" height="46" rx="23"/><text x="450" y="189">No · audio</text></g>
-              <g class="t-node dim"><rect x="20" y="270" width="120" height="44" rx="22"/><text x="80" y="297">Dolor</text></g>
-              <g class="t-node"><rect x="160" y="270" width="120" height="44" rx="22"/><text x="220" y="297">Demo</text></g>
-            </svg>
           </div>
         </div>
 
         <div class="steps">
           <section class="step" data-step="0">
-            <span class="step-n">01 — Posicionamiento</span>
-            <h4>¿Contra qué nos comparan?</h4>
-            <p>Participé en las decisiones de producto y llevé adelante un <strong>ejercicio de posicionamiento</strong>, coordinando a todo el equipo para definir qué hacíamos distinto y para quién.</p>
+            <span class="step-n" data-i18n="th.n1">01 — Posicionamiento</span>
+            <h4 data-i18n="th.h1">¿Contra qué nos comparan?</h4>
+            <p data-i18n="th.p1">Coordiné un <strong>ejercicio de posicionamiento</strong> con todo el equipo para definir qué hacíamos distinto y para quién, y participé en las decisiones de producto que salieron de ahí.</p>
           </section>
           <section class="step" data-step="1">
-            <span class="step-n">02 — Prospección en frío</span>
-            <h4>Una caja de herramientas para vender</h4>
-            <p>Creé una sección donde el usuario arma <strong>landings on demand</strong> y <strong>entregables muy personalizados</strong> asistidos con IA, más templates de mails y mensajes. Todo basado en necesidades reales de los vendedores. También participé en la creación de agentes.</p>
-          </section>
-          <section class="step" data-step="2">
-            <span class="step-n">03 — Llamadas</span>
-            <h4>Árboles de decisión</h4>
-            <p>Guiones para llamadas en frío en forma de árbol: el vendedor sabe qué preguntar y qué hacer en cada respuesta, y la conversación llega a un siguiente paso claro.</p>
+            <span class="step-n" data-i18n="th.n2">02 — Prospección con IA</span>
+            <h4 data-i18n="th.h2">Herramientas que piden los vendedores</h4>
+            <p data-i18n="th.p2">Creé una sección donde el usuario arma <strong>landings on demand</strong> y <strong>entregables personalizados con IA</strong>, más templates de mails y mensajes y guiones de llamada en frío como árboles de decisión. Todo salió de necesidades reales de los vendedores.</p>
           </section>
         </div>
       </div>
     </article>
 
     <!-- ===================== 03 INDUSTRIALLY ===================== -->
-    <article class="chapter" id="industrially" aria-labelledby="ind-title">
+    <article class="chapter on-brand" data-brand="industrially" id="industrially" aria-labelledby="ind-title">
       <header class="ch-head">
         <span class="ch-num" aria-hidden="true">03</span>
-        <div class="ch-meta"><span class="ch-owner">Quantic Core</span><span>Industria</span><span>CCO</span></div>
+        <div class="ch-meta"><span class="ch-owner">Quantic Core</span><span data-i18n="in.meta">Industria</span><span>CCO</span></div>
         <h3 class="ch-title" id="ind-title">Industrially<i>.</i></h3>
-        <p class="ch-lede">La propuesta de Quantic Core para la industria: Envi + Thalk + un módulo productivo hecho <em>100% a medida</em>. Lo acompañé desde la planta hasta la puerta de cada fábrica.</p>
-        <div class="ch-role"><span class="ch-role-k">Mi rol</span><ul><li>Módulo productivo general</li><li>Posicionamiento de marca</li><li>Producto y landing</li><li>CCO · campañas outbound</li><li>Equipo comercial</li><li>Comisiones y referidos</li></ul></div>
+        <p class="ch-lede" data-i18n="in.lede">La propuesta de Quantic Core para la industria: Envi + Thalk + un módulo productivo hecho <em>100% a medida</em>. Lo acompañé desde la planta hasta la puerta de cada fábrica.</p>
+        <div class="ch-role"><span class="ch-role-k" data-i18n="role.k">Mi rol</span><ul data-i18n="in.roles"><li>Módulo productivo general</li><li>Posicionamiento y producto</li><li>Skills de Claude</li><li>CCO · outbound</li></ul></div>
       </header>
 
       <div class="ch-body">
         <div class="stage" aria-hidden="true">
-          <div class="stage-bar"><i></i><i></i><i></i><span class="stage-path">industrially / <b>producto</b></span></div>
+          <div class="stage-bar"><i></i><i></i><i></i><span class="stage-path">industrially / <b data-i18n="in.s0">producto</b></span></div>
 
-          <div class="scene on" data-label="producto">
+          <div class="scene on" data-label="producto" data-i18n-attr="data-label:in.s0">
             <div class="flow">
-              <span class="fl-node">Envi<small>gestión</small></span>
+              <span class="fl-node" data-i18n="in.fl1">Envi<small>gestión</small></span>
               <span class="fl-plus">+</span>
-              <span class="fl-node">Thalk<small>conversaciones</small></span>
+              <span class="fl-node" data-i18n="in.fl2">Thalk<small>conversaciones</small></span>
               <span class="fl-plus">+</span>
-              <span class="fl-node fl-hot">Módulo productivo<small>a medida</small></span>
+              <span class="fl-node fl-hot" data-i18n="in.fl3">Módulo productivo<small>a medida</small></span>
               <span class="fl-eq">=</span>
               <span class="fl-result">Industrially<i>.</i></span>
             </div>
           </div>
 
+          <div class="scene" data-label="skills">
+            <p class="sc-cap" data-i18n="in.cap1">Skill de Claude · documentación a medida</p>
+            <div class="skill">
+              <div class="sk-node"><span data-i18n="in.sk1">Entrada</span><b data-i18n="in.sk1b">Empresa + rubro</b></div>
+              <i class="sk-arrow" aria-hidden="true"></i>
+              <div class="sk-node sk-hot"><span>Claude</span><b data-i18n="in.sk2b">Skill con el contexto de la marca</b></div>
+              <i class="sk-arrow" aria-hidden="true"></i>
+              <div class="sk-node sk-out"><span data-i18n="in.sk3">Salida</span><b data-i18n="in.sk3b">Documentación comercial para esa empresa</b></div>
+            </div>
+          </div>
+
           <div class="scene" data-label="outbound">
-            <p class="sc-cap">Puerta por puerta · Neuquén</p>
-            <div class="doors">
+            <p class="sc-cap" data-i18n="in.cap2">Puerta por puerta · Neuquén</p>
+            <div class="doors" data-i18n="in.doors">
               <div><b>Oil &amp; Gas</b><span>petroleras y servicios</span></div>
               <div><b>Lácteas</b><span>plantas y tambos</span></div>
               <div><b>Alimenticias</b><span>producción</span></div>
               <div><b>Metalúrgicas</b><span>talleres y fábricas</span></div>
             </div>
-            <div class="expo"><span>Expositor</span><b>AOG Patagonia</b></div>
-          </div>
-
-          <div class="scene" data-label="equipo">
-            <svg class="net" viewBox="0 0 600 330">
-              <path class="net-ln" d="M362 196L370 70M362 196L470 150M362 196L492 178M362 196L380 312"/>
-              <path class="net-ln net-far" d="M362 196C260 60 160 40 70 60"/>
-              <g class="net-dots"><circle cx="370" cy="70" r="6"/><circle cx="470" cy="150" r="6"/><circle cx="492" cy="178" r="6"/><circle cx="380" cy="312" r="6"/><circle cx="70" cy="60" r="6"/></g>
-              <circle class="net-home" cx="362" cy="196" r="9"/>
-              <g class="net-tx"><text x="382" y="74">Salta</text><text x="482" y="146">Buenos Aires</text><text x="504" y="190">Mar del Plata</text><text x="394" y="316">Ushuaia</text><text x="84" y="52">Los Ángeles</text><text x="290" y="226">Neuquén</text></g>
-            </svg>
-            <div class="chips"><span>Método April Dunford</span><span>Seguimiento y recompensas</span><span>Comisiones</span><span>Referidos</span></div>
+            <div class="expo"><span data-i18n="in.expo">Expositor</span><b>AOG Patagonia</b></div>
           </div>
         </div>
 
         <div class="steps">
           <section class="step" data-step="0">
-            <span class="step-n">01 — Producto</span>
-            <h4>Software que entiende una planta</h4>
-            <p>Participé en el desarrollo del <strong>módulo productivo general</strong>. Llevé adelante el <strong>posicionamiento de la marca</strong>, decisiones de producto e ideas para su landing page.</p>
+            <span class="step-n" data-i18n="in.n1">01 — Producto</span>
+            <h4 data-i18n="in.h1">Software que entiende una planta</h4>
+            <p data-i18n="in.p1">Participé en el desarrollo del <strong>módulo productivo general</strong> y llevé adelante el <strong>posicionamiento de la marca</strong>, las decisiones de producto y las ideas para su landing.</p>
           </section>
           <section class="step" data-step="1">
-            <span class="step-n">02 — CCO · Outbound</span>
-            <h4>Tocar puertas, literalmente</h4>
-            <p>Me convertí en CCO. Diseñé y ejecuté las campañas outbound saliendo puerta por puerta a industrias de la ciudad: petroleras, oil &amp; gas, alimenticias, lácteas y metalúrgicas. Coordiné reuniones y representé a la marca en <strong>AOG Patagonia</strong>. También cerré ventas para Envi.</p>
+            <span class="step-n" data-i18n="in.n2">02 — IA para escalar</span>
+            <h4 data-i18n="in.h2">Un documento a medida por empresa</h4>
+            <p data-i18n="in.p2">Mapeé el flujo de contacto en frío, armé herramientas para automatizarlo y creé <strong>skills en Claude</strong> que personalizan la documentación comercial para cada empresa y rubro, para que un equipo de ventas pueda escalar sin perder el trato a medida.</p>
           </section>
           <section class="step" data-step="2">
-            <span class="step-n">03 — Escalar</span>
-            <h4>Un equipo en cinco frentes</h4>
-            <p>Mapeé todo el flujo de contacto en frío, creé herramientas para automatizarlo y <strong>skills en Claude</strong> para personalizar documentación. El equipo llegó: Ushuaia, Buenos Aires, Salta, Mar del Plata y Los Ángeles. Los capacité con el método de April Dunford (<em>Obviously Awesome</em>) y armé el plan de seguimiento y recompensas, comisiones y referidos.</p>
+            <span class="step-n" data-i18n="in.n3">03 — Mercado</span>
+            <h4 data-i18n="in.h3">Del producto a la puerta</h4>
+            <p data-i18n="in.p3">Como CCO salí puerta por puerta a industrias de Neuquén, representé a la marca en <strong>AOG Patagonia</strong> y cerré ventas para Envi. Después armé un equipo comercial en cinco ciudades, capacitado con el método de April Dunford.</p>
           </section>
         </div>
       </div>
     </article>
 
-    <p class="horus"><span>+</span> En Quantic Core también participé en <strong>Horus</strong>, una app interna del equipo para documentación y gestión de suscripciones.</p>
-
     <!-- ===================== PROPIOS ===================== -->
     <section class="own" id="propios" aria-labelledby="own-title">
       <div class="work-head">
-        <p class="label">( Proyectos propios )</p>
-        <h2 id="own-title" class="section-title">Lo que construyo<br><em>porque me hace falta.</em></h2>
+        <p class="label" data-i18n="ow.label">( Proyectos propios )</p>
+        <h2 id="own-title" class="section-title" data-i18n="ow.title">Lo que construyo<br><em>porque me hace falta.</em></h2>
       </div>
       <div class="own-grid">
-        <article class="own-card" id="smart-trip" aria-labelledby="trip-title">
+        <article class="own-card on-brand" data-brand="smart-trip" id="smart-trip" aria-labelledby="trip-title">
           <div class="own-vis vis-trip" aria-hidden="true">
             <svg viewBox="0 0 500 320">
               <g class="streets"><path d="M0 80h500M0 170h500M0 260h500M90 0v320M210 0v320M330 0v320M440 0v320"/></g>
               <path class="route" d="M62 251C103 242 91 172 168 180s72 65 135 25 50-115 135-93"/>
               <g class="stops"><circle cx="62" cy="251" r="7"/><circle cx="168" cy="180" r="7"/><circle cx="303" cy="205" r="7"/><circle cx="438" cy="112" r="9"/></g>
             </svg>
-            <span class="vis-tag">3.8 km · 4 paradas · 2 h</span>
+            <span class="vis-tag" data-i18n="ow.tag1">3.8 km · 4 paradas · 2 h</span>
           </div>
           <div class="own-copy">
-            <span class="own-n">04 — App personal</span>
+            <span class="own-n" data-i18n="ow.n1">04 — App personal</span>
             <h3 id="trip-title">Smart Trip<i>.</i></h3>
-            <p>Me mudé a una ciudad nueva y no sabía qué hacer. Construí una app con un agente que arma itinerarios según la distancia que querés recorrer, los horarios y lo que te interesa. Después le sumé funcionalidades y la usé para organizar <strong>racimos de industrias</strong> para visitar puerta por puerta.</p>
+            <p data-i18n="ow.p1">Me mudé a una ciudad nueva y no sabía qué hacer. Construí una app con un agente que arma itinerarios según la distancia que querés recorrer, los horarios y lo que te interesa. Después le sumé funcionalidades y la usé para organizar <strong>racimos de industrias</strong> para visitar puerta por puerta.</p>
           </div>
         </article>
 
-        <article class="own-card" id="fieldops" aria-labelledby="field-title">
+        <article class="own-card on-brand" data-brand="fieldops" id="fieldops" aria-labelledby="field-title">
           <div class="own-vis vis-field" aria-hidden="true">
             <div class="rain">
-              <div style="--p:12%"><span>Lun</span></div><div style="--p:18%"><span>Mar</span></div><div style="--p:45%"><span>Mié</span></div><div class="hot" style="--p:70%"><span>Jue</span></div><div style="--p:30%"><span>Vie</span></div><div style="--p:8%"><span>Sáb</span></div>
+              <div style="--p:12%"><span data-i18n="d.mon">Lun</span></div><div style="--p:18%"><span data-i18n="d.tue">Mar</span></div><div style="--p:45%"><span data-i18n="d.wed">Mié</span></div><div class="hot" style="--p:70%"><span data-i18n="d.thu">Jue</span></div><div style="--p:30%"><span data-i18n="d.fri">Vie</span></div><div style="--p:8%"><span data-i18n="d.sat">Sáb</span></div>
             </div>
-            <span class="vis-tag">Agente: adelantá la fumigación al martes.</span>
+            <span class="vis-tag" data-i18n="ow.tag2">Agente: adelantá la fumigación al martes.</span>
           </div>
           <div class="own-copy">
-            <span class="own-n">05 — En desarrollo · AgTech</span>
+            <span class="own-n" data-i18n="ow.n2">05 — En desarrollo · AgTech</span>
             <h3 id="field-title">FieldOps AI<i>.</i></h3>
-            <p>Agentes de IA que ayudan a productores agropecuarios a decidir y aprovechar oportunidades frente a la incertidumbre climática, gestionando mejor la maquinaria y los servicios de siembra, cosecha y fumigación. Mi familia siempre se dedicó al campo y desde chico los veo sufrir con el clima.</p>
+            <p data-i18n="ow.p2">Agentes de IA que ayudan a productores agropecuarios a decidir y aprovechar oportunidades frente a la incertidumbre climática, gestionando mejor la maquinaria y los servicios de siembra, cosecha y fumigación. Mi familia siempre se dedicó al campo y desde chico los veo sufrir con el clima.</p>
           </div>
         </article>
       </div>
@@ -507,29 +724,29 @@
         </div>
 
         <div class="about-main">
-          <p class="label">( Sobre mí )</p>
-          <h2 id="about-title" class="about-title">Full stack, IA aplicada <em>y ventas.</em> Antes, saxofonista.</h2>
-          <p class="about-lead">Más de 2 años creando funcionalidades para SaaS B2B, integraciones backend y flujos orientados al cliente. Combino ingeniería de producto con descubrimiento de necesidades y resolución de problemas comerciales: llevo funcionalidades desde necesidades de negocio poco definidas hasta su implementación, pruebas, despliegue e iteración con clientes.</p>
+          <p class="label" data-i18n="ab.label">( Sobre mí )</p>
+          <h2 id="about-title" class="about-title" data-i18n="ab.title">Agentes de IA y full stack, <em>con oído comercial.</em> Antes, saxofonista.</h2>
+          <p class="about-lead" data-i18n="ab.lead">Más de 2 años en Quantic Core, desde julio de 2024, construyendo agentes de IA y funcionalidades full stack para sus productos Envi, Thalk e Industrially. Combino ingeniería de producto con descubrimiento de necesidades: me siento con el cliente y llevo funcionalidades desde necesidades de negocio poco definidas hasta su implementación, pruebas, despliegue e iteración.</p>
 
           <div class="timeline">
             <div class="tl-progress"><i></i></div>
             <div class="tl-item">
-              <span class="tl-date">Jul 2024 — hoy</span>
-              <h3>Full stack · Producto y estrategia comercial</h3>
-              <p class="tl-org">Quantic Core · productos Envi, Thalk e Industrially</p>
-              <p>Features full stack con Vue 3, Node/Elysia y MySQL. Sistema de planes y límites configurables, backoffice de ecommerce con Mercado Pago y Ualá, i18n, mails transaccionales, tickets térmicos. Agentes de IA, Growth, prospección B2B, venta consultiva y CCO de Industrially.</p>
+              <span class="tl-date" data-i18n="ab.d1">Jul 2024 — hoy</span>
+              <h3 data-i18n="ab.h1">Full stack e IA aplicada · Producto y estrategia comercial</h3>
+              <p class="tl-org" data-i18n="ab.o1">Quantic Core · productos Envi, Thalk e Industrially</p>
+              <p data-i18n="ab.p1">Agentes de IA en producción, con tools, evals y prompt caching. Features full stack con Vue 3, Node/Elysia y MySQL: sistema de planes y límites configurables, backoffice de ecommerce con Mercado Pago y Ualá, i18n, mails transaccionales, tickets térmicos. Growth, prospección B2B, venta consultiva y CCO de Industrially.</p>
             </div>
             <div class="tl-item">
               <span class="tl-date">2018 — 2024</span>
-              <h3>Músico profesional · saxofón</h3>
-              <p class="tl-org">Eventos internacionales, privados y estudio</p>
-              <p>Riviera francesa, Gran Premio de Mónaco y eventos para Chanel, Bulgari, Porsche y Framatome. Buenos Aires Jazz Festival y Trombonanza.</p>
+              <h3 data-i18n="ab.h2">Músico profesional · saxofón</h3>
+              <p class="tl-org" data-i18n="ab.o2">Eventos internacionales, privados y estudio</p>
+              <p data-i18n="ab.p2">Riviera francesa, Gran Premio de Mónaco y eventos para Chanel, Bulgari, Porsche y Framatome. Buenos Aires Jazz Festival y Trombonanza. Tocar en vivo, bajo presión y sin segunda toma, para clientes exigentes: el mismo oficio que hoy aplico frente a un cliente.</p>
             </div>
             <div class="tl-item">
               <span class="tl-date">2020</span>
-              <h3>Licenciatura en Música · Jazz, saxofón</h3>
-              <p class="tl-org">Conservatorio Superior Manuel de Falla · promedio 9/10</p>
-              <p>Hoy, formación continua en LLMs, RAG e integraciones de IA.</p>
+              <h3 data-i18n="ab.h3">Licenciatura en Música · Jazz, saxofón</h3>
+              <p class="tl-org" data-i18n="ab.o3">Conservatorio Superior Manuel de Falla · promedio 9/10</p>
+              <p data-i18n="ab.p3">Hoy, formación continua en LLMs, RAG e integraciones de IA.</p>
             </div>
           </div>
 
@@ -539,12 +756,12 @@
               <p class="stack">JavaScript · TypeScript · Python · PHP · SQL · Vue 3 · Tailwind · Node.js · Elysia · Bun · Express · MySQL · Sequelize · WebSockets · Playwright · Grafana · Vercel · Railway</p>
             </div>
             <div>
-              <h3 class="mini-h">IA aplicada</h3>
-              <p class="stack">Agentes · integración de tools · evals conversacionales · prompt caching · automatización de flujos</p>
+              <h3 class="mini-h" data-i18n="ab.ai">IA aplicada</h3>
+              <p class="stack" data-i18n="ab.aip">Agentes · integración de tools · validación de acciones · evals conversacionales · prompt caching · automatización de flujos</p>
             </div>
             <div>
-              <h3 class="mini-h">Idiomas</h3>
-              <ul class="langs"><li>Español <span>nativo</span></li><li>Inglés <span>C1/C2</span></li><li>Francés <span>fluido</span></li><li>Alemán <span>básico</span></li></ul>
+              <h3 class="mini-h" data-i18n="ab.lang">Idiomas</h3>
+              <ul class="langs" data-i18n="ab.langs"><li>Español <span>nativo</span></li><li>Inglés <span>C1/C2</span></li><li>Francés <span>fluido</span></li><li>Alemán <span>básico</span></li></ul>
             </div>
           </div>
         </div>
@@ -553,27 +770,28 @@
 
     <!-- ===================== CONTACTO ===================== -->
     <footer class="contact" id="contacto">
-      <p class="label">( Contacto )</p>
-      <h2 class="contact-title"><span class="ct-line"><span>¿Construimos</span></span><span class="ct-line"><span><em>algo juntos?</em></span></span></h2>
+      <p class="label" data-i18n="ct.label">( Contacto )</p>
+      <h2 class="contact-title"><span class="ct-line"><span data-i18n="ct.l1">¿Construimos</span></span><span class="ct-line"><span><em data-i18n="ct.l2">algo juntos?</em></span></span></h2>
 
       <div class="contact-row">
-        <button class="mail-btn" type="button" data-email="manuelponzo.dev@gmail.com" data-cursor="Copiar">
+        <button class="mail-btn" type="button" data-email="manuelponzo.dev@gmail.com" data-cursor="Copiar" data-i18n-attr="data-cursor:cur.copy">
           <span class="mail-text">manuelponzo.dev@gmail.com</span>
-          <span class="mail-hint">Click para copiar</span>
+          <span class="mail-hint" data-i18n="ct.hint">Click para copiar</span>
         </button>
-        <a class="round-btn round-btn-xl magnetic" href="mailto:manuelponzo.dev@gmail.com?subject=Hola%20Manu" data-cursor="Escribir"><span>Escribime</span></a>
+        <a class="round-btn round-btn-xl magnetic" href="mailto:manuelponzo.dev@gmail.com?subject=Hola%20Manu" data-cursor="Escribir" data-i18n-attr="data-cursor:cur.write"><span data-i18n="ct.btn">Escribime</span></a>
       </div>
 
       <div class="footer-bottom">
-        <a class="brand" href="#inicio" aria-label="Volver al inicio">M<span>.</span></a>
-        <span>Hora local <b class="clock">—</b></span>
+        <a class="brand" href="#inicio" aria-label="Volver al inicio" data-i18n-attr="aria-label:ft.home">M<span>.</span></a>
+        <span><span data-i18n="ft.time">Hora local</span> <b class="clock">—</b></span>
         <span>© <span id="year">2026</span> Manuel Ponzo</span>
-        <a href="#inicio" class="nav-link"><span data-text="Volver arriba ↑">Volver arriba ↑</span></a>
+        <a href="#inicio" class="nav-link"><span data-text="Volver arriba ↑" data-i18n="ft.top">Volver arriba ↑</span></a>
       </div>
     </footer>
   </main>
 
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # Manuel Ponzo — Portfolio
 
-Portfolio personal en español. Estética oscura y editorial (Inter Tight + Instrument Serif + DM Mono, acento naranja), con:
+Portfolio personal en inglés (por defecto), español y francés. Estética oscura y editorial (Inter Tight + Instrument Serif + DM Mono, acento naranja), con:
 
 - Saludo inicial en los idiomas que hablo (Hola · Hello · Bonjour · Hallo).
 - Retrato en blanco y negro que revela el color bajo el cursor.
