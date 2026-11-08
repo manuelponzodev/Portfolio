@@ -660,12 +660,18 @@
   const translations = { en, fr };
   const supported = ["en", "es", "fr"];
 
+  // El <head> va en inglés para buscadores y vistas previas de links: su español vive acá
+  const esHead = {
+    "meta.title": "Manuel Ponzo — Agentes de IA y producto B2B en producción",
+    "meta.desc": "Manuel Ponzo — AI Engineer y desarrollador full stack. Construyo agentes de IA y producto SaaS B2B que funcionan en producción, con evals y validación de acciones. Y entiendo el lado comercial: discovery, posicionamiento y venta.",
+  };
+
   const textNodes = [...document.querySelectorAll("[data-i18n]")];
   const attrNodes = [...document.querySelectorAll("[data-i18n-attr]")].map((el) => ({
     el,
-    pairs: el.dataset.i18nAttr.split(";").map((p) => p.split(":")).map(([attr, key]) => ({ attr, key, es: el.getAttribute(attr) })),
+    pairs: el.dataset.i18nAttr.split(";").map((p) => p.split(":")).map(([attr, key]) => ({ attr, key, es: esHead[key] ?? el.getAttribute(attr) })),
   }));
-  const es = new Map(textNodes.map((el) => [el, el.innerHTML]));
+  const es = new Map(textNodes.map((el) => [el, esHead[el.dataset.i18n] ?? el.innerHTML]));
   const listeners = [];
   let lang = "es";
 
